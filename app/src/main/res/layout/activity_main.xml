@@ -20,6 +20,6 @@
         android:textColor="@color/colorTextdark"
         android:fontFamily="@font/raleway_semibold" />
 
-
+//
     </LinearLayout>
 </RelativeLayout>
