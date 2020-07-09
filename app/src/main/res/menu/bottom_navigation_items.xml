@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/ic_home_run"
+        android:title="Home"
+        app:cnb_iconColor="@color/blue"/>
+    <item
+        android:id="@+id/action_preferiti"
+        android:icon="@drawable/ic_favorites"
+        android:title="Preferiti"
+        app:cnb_iconColor="@color/blue"/>
+    <item
+        android:id="@+id/action_cerca"
+        android:icon="@drawable/ic_cerca"
+        android:title="Cerca"
+        app:cnb_iconColor="@color/blue" />
+    <item
+        android:id="@+id/action_profilio"
+        android:icon="@drawable/ic_user"
+        android:title="Profilio"
+        app:cnb_iconColor="@color/blue" />
+</menu>
