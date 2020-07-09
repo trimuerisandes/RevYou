@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true"
+    android:clipToPadding="false"
+    android:minWidth="0dp"
+    android:elevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:src="@drawable/pic_gym2"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:fontFamily="@font/open_sans_regular"
+            android:layout_above="@+id/parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="10dp"
+            android:text="21 Set 20"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/sub_text"
+                android:lineHeight="17dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:textSize="11sp"
+                android:layout_marginRight="5dp"
+                android:text="(214)"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_blue_dark"
+                android:fontFamily="@font/open_sans_regular"
+                android:textSize="11sp"
+
+                android:lineHeight="17dp"
+                android:text="4.5"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@android:color/white"
+            android:layout_below="@+id/image">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/sub_text"
+                android:lineHeight="17dp"
+                android:textSize="12sp"
+                android:fontFamily="@font/open_sans_regular"
+                android:text="I runner principianti sottoposti ad allenamento di resistenza o rinforzo specifico, rispetto al solo stretching, presentano un tasso di infortuni più basso?"/>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/image"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/pic_image2"-->
+<!--                android:adjustViewBounds="true" />-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/ic_arrow_up"-->
+<!--                android:layout_margin="20dp"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:layout_margin="20dp"-->
+<!--                android:lineHeight="17dp"-->
+<!--                android:layout_marginRight="5dp"-->
+<!--                android:text="21 Set 20"/>-->
+
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentBottom="true"-->
+<!--                    android:layout_alignParentRight="true"-->
+
+<!--                    android:orientation="horizontal">-->
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+
+<!--                        android:textColor="@android:color/black"-->
+<!--                        android:text="(214)"/>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:textColor="@android:color/black"-->
+<!--                        android:text="45"/>-->
+<!--                </LinearLayout>-->
+
+<!--        </RelativeLayout>-->
+
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--         -->
+<!--            android:layout_margin="20dp"-->
+
+<!--            android:background="@android:color/white">-->
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:lineHeight="17dp"-->
+<!--                android:text="I runner principianti sottoposti ad allenamento di resistenza o rinforzo specifico, rispetto al solo stretching, presentano un tasso di infortuni più basso?"/>-->
+
+<!--        </LinearLayout>-->
+<!--    </LinearLayout>-->
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>
