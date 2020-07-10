@@ -11,5 +11,8 @@
     <color name="sub_text">#BEBEBE</color>
     <color name="text">#585858</color>
     <color name="textBlue">#168BE6</color>
+    <color name="textBlue2">#14A4C0</color>
+    <color name="textBlue3">#12C493</color>
+
 
 </resources>
