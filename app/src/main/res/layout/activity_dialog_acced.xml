@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_layout"
+    tools:context=".dialogs.DialogAcced">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/margin_20dp"
+        android:paddingVertical="@dimen/margin_20dp"
+        android:background="@drawable/bg_dialog"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_acced" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Accedi a RevYou!"
+            android:layout_marginVertical="@dimen/margin_20dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorTextdark"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_regular"
+            android:layout_marginBottom="@dimen/margin_30dp"
+            android:text="Cliccando “Accedi” avrai 7 giorni di prova \n
+gratuita per poi usufruire automaticamente \n
+del tuo abbonamento annuale"
+            android:textAlignment="center"
+            android:textColor="@color/colorTextDark1"
+            android:textSize="14dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accedi"
+            android:textAllCaps="false"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textColor="@color/textBlue"
+            android:background="@drawable/bg_blue"/>
+    </LinearLayout>
+
+</RelativeLayout>

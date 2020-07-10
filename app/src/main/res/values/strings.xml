@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RevYou</string>
+    <string name="Pagamento">Pagamento in unica soluzione \nda 179,88€</string>
+    <string name="Abbonamento">Abbonamento annuale</string>
 </resources>
