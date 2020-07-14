@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.Shader;
@@ -14,12 +15,14 @@ import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.app.revyou.R;
 
+import butterknife.OnClick;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout packageStarting;
     LinearLayout packageStarting1;
     LinearLayout packageStarting2;
+    Button btnProva;
     Context context;
     TextView textGradient;
 
@@ -40,7 +44,17 @@ public class MainActivity extends AppCompatActivity {
         packageStarting = findViewById(R.id.packageStarting);
         packageStarting1 = findViewById(R.id.packageStarting1);
         packageStarting2 = findViewById(R.id.packageStarting2);
+        btnProva = findViewById(R.id.btnProva);
 
+
+        btnProva.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, PrimaActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
         textGradient.setText("Abbonamento annuale".toUpperCase());
 

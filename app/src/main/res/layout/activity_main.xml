@@ -309,6 +309,7 @@
             </LinearLayout>
 
             <Button
+                android:id="@+id/btnProva"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Prova gratis 7 Giorni!"
