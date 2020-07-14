@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
     android:layout_height="match_parent"
     android:layout_width="match_parent">
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -7,16 +8,20 @@
         android:layout_height="match_parent"
         >
 
+
         <ImageView
+            android:id="@+id/pic_subtraction"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+
             android:background="@drawable/pic_subtraction"
             />
 
         <LinearLayout
+            android:id="@+id/paret_logo"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="40dp"
             android:layout_marginBottom="20dp"
             android:orientation="vertical">
 
@@ -36,6 +41,18 @@
                 android:fontFamily="@font/raleway_bold"
                 android:textColor="@android:color/white"
                 android:layout_marginVertical="20dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/parent_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/paret_logo"
+
+            android:orientation="vertical">
+
 
             <include
                 android:layout_height="wrap_content"
