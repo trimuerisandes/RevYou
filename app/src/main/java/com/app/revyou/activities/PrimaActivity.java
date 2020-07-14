@@ -1,28 +1,51 @@
 package com.app.revyou.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.Shader;
 import android.os.Bundle;
 import android.text.TextPaint;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.CheckedTextView;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import com.app.revyou.R;
+import com.devzone.checkabletextview.CheckableTextView;
+
+import butterknife.OnCheckedChanged;
 
 public class PrimaActivity extends AppCompatActivity {
 
     TextView textGradient;
     TextView titke;
+    CheckableTextView checkableTextView;
+    //CheckedTextView checkedTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prima);
+        Context context = null;
         textGradient = findViewById(R.id.prima);
         titke = findViewById(R.id.list1);
+        CheckBox cb = (CheckBox) findViewById(R.id.cbok);
+        cb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) { buttonView.setTextColor(getResources().getColor(R.color.blue));
+
+                cb.append("-");
+                //cb.append("-",0,0);}
+                cb.setText("-"+ context); }
+                if (!isChecked) { buttonView.setTextColor(getResources().getColor(R.color.colorTextDark1)); }
+            }
+        });
 
         titke.setOnClickListener(new View.OnClickListener() {
             @Override
