@@ -121,7 +121,7 @@ public class HomeFragment extends androidx.fragment.app.Fragment {
         m_ultimate6.setAdapter(corsiAdapter);
 
 
-        //m_subtraction.startAnimation(slide_down);
+        m_subtraction.startAnimation(slide_down);
         m_logo.startAnimation(slide_down);
         m_main.startAnimation(slide_up);
 
