@@ -17,8 +17,8 @@
             android:id="@+id/prima"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_40dp"
             android:layout_marginHorizontal="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/margin_40dp"
             android:fontFamily="@font/open_sans_semibold"
             android:text="PRIMA DI INIZIARE"
             android:textSize="20dp" />
@@ -26,91 +26,180 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_20dp"
             android:layout_marginTop="@dimen/margin_40dp"
             android:fontFamily="@font/raleway_semibold"
-            android:layout_marginHorizontal="@dimen/margin_20dp"
             android:lineHeight="35dp"
             android:text="Indica la tua professione e \ninizia la prova gratuita:"
             android:textSize="22dp" />
 
+
+
         <View
-            android:layout_below="@+id/root1"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
+            android:layout_below="@+id/root1"
             android:layout_marginTop="@dimen/margin_64dp"
             android:background="@color/colorTextDark1" />
-        <TextView
-            android:id="@+id/list1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Laureato in fisioterapia"
-            android:textColor="@color/colorTextdark"
-            android:layout_marginVertical="@dimen/margin_20dp"
-            android:layout_marginHorizontal="@dimen/margin_20dp"
-            android:fontFamily="@font/open_sans_regular"
-            android:textSize="12dp"/>
+
+
+        <RelativeLayout
+            android:animateLayoutChanges="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/butllet1"
+                android:layout_width="8dp"
+                android:layout_height="1dp"
+                android:background="@color/textBlue"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:layout_centerVertical="true"
+                />
+
+            <CheckBox
+                android:id="@+id/cbok1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/butllet1"
+                android:paddingHorizontal="20dp"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/open_sans_regular"
+                android:freezesText="false"
+                android:paddingVertical="@dimen/margin_20dp"
+                android:text="Laureato in fisioterapia"
+                android:textSize="12dp" />
+        </RelativeLayout>
+
         <View
-            android:layout_below="@+id/root1"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
+            android:layout_below="@+id/root1"
             android:background="@color/colorTextDark1" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Studente in fisioterapia"
-            android:layout_marginVertical="@dimen/margin_20dp"
-            android:layout_marginHorizontal="@dimen/margin_20dp"
-            android:fontFamily="@font/open_sans_regular"
-            android:textSize="12dp"/>
+
+
+        <RelativeLayout
+            android:animateLayoutChanges="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/butllet2"
+                android:layout_width="8dp"
+                android:layout_height="1dp"
+                android:background="@color/textBlue"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:layout_centerVertical="true"
+                />
+
+            <CheckBox
+                android:id="@+id/cbok2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/butllet2"
+                android:paddingHorizontal="20dp"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/open_sans_regular"
+
+                android:freezesText="false"
+                android:paddingVertical="@dimen/margin_20dp"
+                android:text="Studente in fisioterapia"
+                android:textSize="12dp" />
+        </RelativeLayout>
+
+
         <View
-            android:layout_below="@+id/root1"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
+            android:layout_below="@+id/root1"
             android:background="@color/colorTextDark1" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Professionista in ambito salute"
-            android:layout_marginVertical="@dimen/margin_20dp"
-            android:layout_marginHorizontal="@dimen/margin_20dp"
-            android:fontFamily="@font/open_sans_regular"
-            android:textSize="12dp"/>
+
+
+        <RelativeLayout
+            android:animateLayoutChanges="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/butllet3"
+                android:layout_width="8dp"
+                android:layout_height="1dp"
+                android:background="@color/textBlue"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:layout_centerVertical="true"
+                />
+
+            <CheckBox
+                android:id="@+id/cbok3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/butllet3"
+                android:paddingHorizontal="20dp"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/open_sans_regular"
+
+                android:freezesText="false"
+                android:paddingVertical="@dimen/margin_20dp"
+                android:text="Professionista in ambito salute"
+                android:textSize="12dp" />
+        </RelativeLayout>
+
         <View
-            android:layout_below="@+id/root1"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
+            android:layout_below="@+id/root1"
             android:background="@color/colorTextDark1" />
-      <CheckBox
-            android:id="@+id/cbok"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Professionista in ambito fitness"
-            android:layout_marginVertical="@dimen/margin_20dp"
-            android:layout_marginHorizontal="@dimen/margin_20dp"
-            android:buttonTint="@color/textBlue"
-            android:freezesText="true"
-            android:button="@android:color/transparent"
-            android:fontFamily="@font/open_sans_regular"
-            android:textSize="12dp"/>
+
+        <RelativeLayout
+            android:animateLayoutChanges="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/butllet"
+                android:layout_width="8dp"
+                android:layout_height="1dp"
+                android:background="@color/textBlue"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:layout_centerVertical="true"
+                />
+            <CheckBox
+                android:id="@+id/cbok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/butllet"
+                android:paddingHorizontal="20dp"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/open_sans_regular"
+                android:freezesText="false"
+                android:paddingVertical="@dimen/margin_20dp"
+                android:text="Professionista in ambito fitness"
+                android:textSize="12dp" />
+        </RelativeLayout>
+
         <View
-            android:layout_below="@+id/root1"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
+            android:layout_below="@+id/root1"
             android:background="@color/colorTextDark1" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonVal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Vai al pagamento"
-        android:fontFamily="@font/open_sans_regular"
-        android:textSize="16dp"
-        android:state_enabled="false"
-        android:textColor="@color/colorTextDark2"
-        android:textAllCaps="false"
-        android:background="@color/bgButton"
         android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/margin_20dp"
         android:layout_marginVertical="@dimen/margin_20dp"
-        android:layout_marginHorizontal="@dimen/margin_20dp"/>
+        android:background="@color/bgButton"
+        android:fontFamily="@font/open_sans_regular"
+        android:state_enabled="false"
+        android:text="Vai al pagamento"
+        android:textAllCaps="false"
+        android:textColor="@color/colorTextDark2"
+        android:textSize="16dp" />
 </RelativeLayout>
