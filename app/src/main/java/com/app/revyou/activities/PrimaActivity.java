@@ -44,7 +44,7 @@ public class PrimaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prima);
         Context context = this;
-        textGradient = findViewById(R.id.prima);
+
         button = findViewById(R.id.buttonVal);
         bulet = findViewById(R.id.butllet);
         bulet1 = findViewById(R.id.butllet1);
@@ -171,17 +171,8 @@ public class PrimaActivity extends AppCompatActivity {
 
 
 
-        textGradient.setText("PRIMA DI INIZIARE".toUpperCase());
 
-        TextPaint paint = textGradient.getPaint();
-        float width = paint.measureText("PRIMA DI INIZIARE");
 
-        Shader textShader = new LinearGradient(0, 0, width, textGradient.getTextSize(),
-                new int[]{
-                        Color.parseColor("#14A4C0"),
-                        Color.parseColor("#12C493"),
-                }, null, Shader.TileMode.CLAMP);
-        textGradient.getPaint().setShader(textShader);
 
 
     }
