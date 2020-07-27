@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".activities.PrimaActivity"></activity>
         <activity android:name=".dialogs.DialogAcced"></activity>
-        <activity android:name=".activities.MainHome">
+        <activity android:name=".activities.Main">
 
         </activity>
         <activity android:name=".activities.MainActivity">

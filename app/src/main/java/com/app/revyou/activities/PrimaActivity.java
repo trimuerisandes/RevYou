@@ -1,34 +1,20 @@
 package com.app.revyou.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.LinearGradient;
-import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.RippleDrawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.text.TextPaint;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CheckedTextView;
 import android.widget.CompoundButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.app.revyou.R;
-import com.google.android.material.internal.FlowLayout;
-
-import butterknife.OnCheckedChanged;
 
 public class PrimaActivity extends AppCompatActivity {
 
@@ -63,7 +49,7 @@ public class PrimaActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, MainHome.class);
+                Intent intent = new Intent(context, Main.class);
                 startActivity(intent);
             }
         });
