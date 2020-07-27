@@ -5,15 +5,15 @@
     android:id="@+id/lyt_parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.app.revyou.activities.MainHome">
+    tools:context="com.app.revyou.activities.Main">
 
     <RelativeLayout
-        android:id="@+id/container"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <FrameLayout
-            android:id="@+id/content"
+            android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fadingEdge="none"
