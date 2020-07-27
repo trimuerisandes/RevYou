@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:width="4.7dp"
+        android:height="7.9dp"
+        android:gravity="center_vertical">
+        <shape android:shape="rectangle">
+            <corners android:radius="5dp" />
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <item
+        android:width="4.7dp"
+        android:height="26.6dp"
+        android:gravity="center_vertical"
+        android:left="7.2dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="5dp" />
+            <solid android:color="@color/colorWhite" />
+        </shape>
+    </item>
+    <item
+        android:width="4.7dp"
+        android:height="50.3dp"
+        android:gravity="center_vertical"
+        android:left="14.4dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="5dp" />
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <item
+        android:width="4.7dp"
+        android:height="26.6dp"
+        android:gravity="center_vertical"
+        android:left="21.6dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="5dp" />
+            <solid android:color="@color/colorWhite" />
+        </shape>
+    </item>
+    <item
+        android:width="4.7dp"
+        android:height="50.3dp"
+        android:gravity="center_vertical"
+        android:left="28.8dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="5dp" />
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <item
+        android:width="4.7dp"
+        android:height="26.6dp"
+        android:gravity="center_vertical"
+        android:left="36dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="5dp" />
+            <solid android:color="@color/colorWhite" />
+        </shape>
+    </item>
+    <item
+        android:width="4.7dp"
+        android:height="7.9dp"
+        android:gravity="center_vertical"
+        android:left="43.2dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="5dp" />
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+</layer-list>
