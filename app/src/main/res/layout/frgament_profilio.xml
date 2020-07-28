@@ -1,14 +1,252 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:fillViewport="true">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Profolio"
-        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="30dp"
+            android:elevation="2dp"
+            android:background="@drawable/gradient_backgroud">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_40dp"
+                android:src="@drawable/ic_freccia_back"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Impostazioni"
+                android:textColor="@color/colorWhite"
+                android:textSize="25sp"
+                android:fontFamily="@font/raleway_bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/parent"
+            android:padding="@dimen/margin_20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Profilo personale"
+                android:textColor="#4A4A4A"
+                android:gravity="center|left"
+                android:drawablePadding="10dp"
+                android:layout_marginBottom="@dimen/margin_10dp"
+                android:drawableLeft="@drawable/ic_user_profilio"
+                android:fontFamily="@font/raleway_semibold"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/div"
+                android:layout_marginVertical="@dimen/margin_10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/sub_text"
+                android:textSize="12sp"
+                android:layout_marginTop="@dimen/margin_14dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Nome utente"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:textSize="16sp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:text="Aryan Shirani"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/sub_text"
+                android:textSize="12sp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Email"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:textSize="16sp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:text="aryan.shirani@gmail.com"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/sub_text"
+                android:textSize="12sp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="abbonamento"/>
+
+            <TextView
+                android:id="@+id/abbonamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:textSize="16sp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:drawableRight="@drawable/ic_arrow_right"
+                android:text="Annuale attivo fino al 12/06/2020"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_blue"
+                android:text="Rinnova Abbonamento"
+                android:textColor="#168BE6"
+                android:layout_marginVertical="25dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:textAllCaps="false"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Notifiche"
+                android:textColor="#4A4A4A"
+                android:gravity="center|left"
+                android:layout_marginTop="25dp"
+                android:drawablePadding="10dp"
+
+                android:drawableLeft="@drawable/ic_notif_black"
+                android:fontFamily="@font/raleway_semibold"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/div"
+                android:layout_marginVertical="@dimen/margin_20dp"/>
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sistema di notifica"
+                android:textSize="16sp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:textColor="@color/text"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:textSize="16sp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:drawableRight="@drawable/ic_arrow_right"
+                android:text="Giorno e ora"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:textSize="16sp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:drawableRight="@drawable/ic_arrow_right"
+                android:text="Argomenti"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:src="@drawable/pic_logo_revyou_black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/div"
+                android:layout_marginVertical="@dimen/margin_20dp"/>
 
 
-</RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:textSize="16sp"
+                android:layout_marginBottom="@dimen/margin_30dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:drawableRight="@drawable/ic_arrow_right"
+                android:text="Revyouers"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:textSize="16sp"
+                android:layout_marginBottom="@dimen/margin_30dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:drawableRight="@drawable/ic_arrow_right"
+                android:text="Valutazione articoli"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:textSize="16sp"
+                android:layout_marginBottom="@dimen/margin_30dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:drawableRight="@drawable/ic_arrow_right"
+                android:text="Suggerimenti"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:textSize="16sp"
+                android:layout_marginBottom="@dimen/margin_30dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:drawableRight="@drawable/ic_arrow_right"
+                android:text="Privacy Policy"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:textSize="16sp"
+                android:layout_marginBottom="@dimen/margin_30dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:drawableRight="@drawable/ic_arrow_right"
+                android:text="Termini e condizioni"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

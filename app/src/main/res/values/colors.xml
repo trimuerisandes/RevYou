@@ -13,9 +13,12 @@
     <color name="greenblue">#0089FF</color>
     <color name="green">#11da74</color>
     <color name="sub_text">#BEBEBE</color>
+    <color name="color_gray">#F3F3F3</color>
     <color name="text">#585858</color>
     <color name="textBlue">#168BE6</color>
     <color name="bgButton">#E6E6E6</color>
+    <color name="div">#11707070</color>
+
 
 
 </resources>

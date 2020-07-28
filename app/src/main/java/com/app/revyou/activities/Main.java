@@ -25,6 +25,7 @@ import butterknife.ButterKnife;
 
 public class Main extends AppCompatActivity {
 
+
     Context mContext;
     final Fragment HomeFragment = new HomeFragment();
     final Fragment PreferitiFragment = new PreferitiFragment();
