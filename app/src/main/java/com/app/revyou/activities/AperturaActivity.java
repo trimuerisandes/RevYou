@@ -19,6 +19,7 @@ public class AperturaActivity extends Activity {
     ImageView im_logo_end_2;
     ImageView im_logo_start;
     ImageView im_logo_start_2;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,11 +29,9 @@ public class AperturaActivity extends Activity {
         im_logo_start = findViewById(R.id.im_logo_start); // first section
         im_logo_start_2 = findViewById(R.id.im_logo_start_2);// first section
         im_logo_end_2.setVisibility(View.VISIBLE);
-        new CountDownTimer(6000, 1000)
-        {
-            public void onTick(long millisUntilFinished)
-            {
-                if (leng % 2 == 0){
+        new CountDownTimer(6000, 1000) {
+            public void onTick(long millisUntilFinished) {
+                if (leng % 2 == 0) {
                     im_logo_end_2.setScaleY(1);
                     im_logo_start.setScaleY(0);
                     im_logo_end_2.animate().scaleY(0).setDuration(1000).setInterpolator(new DecelerateInterpolator()).start();
@@ -48,8 +47,7 @@ public class AperturaActivity extends Activity {
                 leng++;
             }
 
-            public void onFinish()
-            {
+            public void onFinish() {
                 // finish off when we're all dead !
             }
         }.start();

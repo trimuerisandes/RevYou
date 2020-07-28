@@ -12,22 +12,16 @@
 
         <activity android:name=".activities.PrimaActivity"></activity>
         <activity android:name=".dialogs.DialogAcced"></activity>
-        <activity android:name=".activities.Main">
+        <activity android:name=".activities.Main"></activity>
+        <activity android:name=".activities.MainActivity"></activity>
 
-        </activity>
-        <activity android:name=".activities.MainActivity">
-
-        <activity android:name=".activities.AperturaActivity">
-
+        <activity android:name=".activities.AperturaActivity"></activity>
+        <activity android:name=".activities.BoardingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.PrimaActivity"></activity>
-        <activity android:name=".dialogs.DialogAcced"></activity>
-        <activity android:name=".activities.MainHome"></activity>
-        <activity android:name=".activities.MainActivity"></activity>
     </application>
 
 </manifest>

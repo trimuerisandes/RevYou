@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <ImageView
+        android:id="@+id/pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="38dp"
+        android:adjustViewBounds="true"
+        android:layout_above="@id/parent"
+        android:src="@drawable/pic_step_1" />
+
+    <LinearLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="36dp"
+        android:layout_marginBottom="25dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/raleway_semibold"
+            android:lineSpacingExtra="5sp"
+            android:text="Benvenuto in RevYou!"
+            android:textAlignment="center"
+            android:textColor="#373737"
+            android:textSize="28sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/open_sans_regular"
+            android:lineSpacingExtra="5sp"
+            android:text="La prima App che ti permette in pochi e semplici clic di rimanere aggiornato sulle più recenti evidenze scientifiche."
+            android:textAlignment="center"
+            android:textColor="#373737"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</RelativeLayout>
