@@ -5,6 +5,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -59,10 +60,18 @@ public class AuthActivity extends AppCompatActivity {
             if (current < layouts.length) {
                 viewPager.setCurrentItem(current);
 
+            }else {
+                //launchHomeScreen();
+                launchNextScreen();
             }
 
         });
 
+
+    }
+    public void launchNextScreen() {
+        startActivity(new Intent(AuthActivity.this, MainActivity.class));
+        finish();
     }
 
     private int getItem(int i) {
@@ -119,6 +128,8 @@ public class AuthActivity extends AppCompatActivity {
 
             return view;
         }
+
+
 
         @Override
         public int getCount() {

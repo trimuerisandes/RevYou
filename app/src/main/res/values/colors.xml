@@ -7,8 +7,10 @@
     <color name="colorTextDark1">#A5A5A5</color>
     <color name="colorTextDark2">#6D6D6D</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="color_inactive_dot">#d6d6d6</color>
     <color name="colorBorderDivider">#19707070</color>
     <color name="blue">#168BE6</color>
+    <color name="greenblue">#0089FF</color>
     <color name="green">#11da74</color>
     <color name="sub_text">#BEBEBE</color>
     <color name="color_gray">#F3F3F3</color>

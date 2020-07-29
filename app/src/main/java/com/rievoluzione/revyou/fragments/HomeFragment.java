@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 import com.rievoluzione.revyou.R;
 import com.rievoluzione.revyou.adapter.ArgomentiAdapter;
 import com.rievoluzione.revyou.adapter.CorsiAdapter;
