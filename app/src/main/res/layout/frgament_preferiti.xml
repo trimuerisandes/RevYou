@@ -26,7 +26,7 @@
 
 
 
-        <com.app.revyou.utils.MyGridView
+        <com.rievoluzione.revyou.utils.MyGridView
             android:id="@+id/grid_view"
             android:layout_below="@id/title"
             android:layout_width="match_parent"
