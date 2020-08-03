@@ -15,6 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.BoardingActivity"></activity>
         <activity android:name="com.rievoluzione.revyou.activities.MainActivity"></activity>
         <activity android:name="com.rievoluzione.revyou.activities.PrimaActivity"></activity>
         <activity android:name="com.rievoluzione.revyou.dialogs.DialogAcced"></activity>
