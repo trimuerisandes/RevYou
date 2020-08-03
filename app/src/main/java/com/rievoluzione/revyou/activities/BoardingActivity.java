@@ -18,7 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.app.revyou.R;
+import com.rievoluzione.revyou.R;
 
 
 public class BoardingActivity extends AppCompatActivity {
@@ -100,7 +100,7 @@ public class BoardingActivity extends AppCompatActivity {
 
         @Override
         public void onPageScrollStateChanged(int arg0) {
-            Log.d("onPageScrollStateChanged", "onPageScrollStateChanged: " + arg0);
+            Log.d("onPageScroll", "onPageScrollStateChanged: " + arg0);
         }
     };
     private int[] layouts;
@@ -137,10 +137,10 @@ public class BoardingActivity extends AppCompatActivity {
          * Checking for first time launch - before calling setContentView()
          */
         session = new Session(this);
-        if (!session.isFirstTimeLaunch()) {
+        /*if (!session.isFirstTimeLaunch()) {
             launchHomeScreen();
             finish();
-        }
+        }*/
 
 
         /**
@@ -227,7 +227,7 @@ public class BoardingActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
         session.setFirstTimeLaunch(false);
-        startActivity(new Intent(BoardingActivity.this, AperturaActivity.class));
+        startActivity(new Intent(BoardingActivity.this, MainActivity.class));
         finish();
     }
 

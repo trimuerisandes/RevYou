@@ -52,7 +52,7 @@ public class AperturaActivity extends Activity {
             }
         }.start();
         new Handler().postDelayed(() -> {
-            startActivity(new Intent(AperturaActivity.this, MainActivity.class));
+            startActivity(new Intent(AperturaActivity.this, BoardingActivity.class));
             finish();
         }, 6000);
     }
