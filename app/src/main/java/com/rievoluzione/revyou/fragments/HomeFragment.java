@@ -1,12 +1,14 @@
 package com.rievoluzione.revyou.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewStub;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.rievoluzione.revyou.R;
+import com.rievoluzione.revyou.activities.ArticoloApertoActivity;
 import com.rievoluzione.revyou.adapter.ArgomentiAdapter;
 import com.rievoluzione.revyou.adapter.CorsiAdapter;
 import com.rievoluzione.revyou.adapter.MiglioriAdapter;
@@ -50,6 +53,8 @@ public class HomeFragment extends androidx.fragment.app.Fragment {
     View m_logo;
     @BindView(R.id.parent_main)
     View m_main;
+    @BindView(R.id.view_stub_banner)
+    ViewStub m_view_stub_banner;
 
 
     @Nullable
@@ -66,6 +71,15 @@ public class HomeFragment extends androidx.fragment.app.Fragment {
 
         Animation slide_up = AnimationUtils.loadAnimation(getContext(),
                 R.anim.slide_up);
+
+        View inflated = m_view_stub_banner.inflate();
+
+        LinearLayout linearLayout = inflated.findViewById(R.id.layout_banner_item);
+
+        linearLayout.setOnClickListener(v -> {
+            startActivity(new Intent(getActivity(), ArticoloApertoActivity.class));
+        });
+
 
 // Start animation
 
@@ -84,7 +98,6 @@ public class HomeFragment extends androidx.fragment.app.Fragment {
 //        animate.setDuration(500);
 //        animate.setFillAfter(true);
 //        m_subtraction.startAnimation(animate);
-
 
 
         m_ultimate.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
@@ -112,6 +125,7 @@ public class HomeFragment extends androidx.fragment.app.Fragment {
         m_logo.startAnimation(slide_down);
         m_main.startAnimation(slide_up);
 
+
 //        ObjectAnimator objectanimator2 = ObjectAnimator.ofFloat(m_main,"y",m_logo.getHeight());
 //        objectanimator2.setDuration(4000);
 //        objectanimator2.start();
@@ -120,7 +134,6 @@ public class HomeFragment extends androidx.fragment.app.Fragment {
         return view;
 
     }
-
 
 
 }

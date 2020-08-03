@@ -23,7 +23,7 @@
         <activity android:name=".activities.SuggerimentiActivity" />
         <activity android:name=".activities.ArgomentiActivity" />
         <activity android:name=".activities.UpgradeActivity" />
-
+        <activity android:name="com.rievoluzione.revyou.activities.ArticoloApertoActivity"></activity>
     </application>
 
 </manifest>

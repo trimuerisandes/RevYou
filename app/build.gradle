@@ -9,7 +9,7 @@ android {
     buildToolsVersion "30.0.0"
 
     defaultConfig {
-        applicationId "com.app.revyou"
+        applicationId "com.rievoluzione.revyou"
         minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
