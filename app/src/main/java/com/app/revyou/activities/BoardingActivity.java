@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -66,7 +66,7 @@ public class BoardingActivity extends AppCompatActivity {
     };
     private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
-    private LinearLayout dotsLayout;
+    private RelativeLayout dotsLayout;
     private TextView[] dots;
     //  viewpager change listener
     ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {
@@ -85,11 +85,16 @@ public class BoardingActivity extends AppCompatActivity {
             );
 
             if (arg1 > 0) {
-                Log.d("onPageScrolled arg0", "onPageScrolled: " + arg0);
+                int tmp1 = (int) ((arg0 + 1) * 25 * arg1);
+                int tmp2 = -1 * (int) (25 * (arg1));
 
-                dots[0].setTranslationX(convertDpToPixel((int) ((arg0 + 1) * 34 * arg1), getApplicationContext()));
+                dots[0].setTranslationX(convertDpToPixel(tmp1, getApplicationContext()));
+                dots[arg0+1].setTranslationX(convertDpToPixel(tmp2, getApplicationContext()));
 
-                dots[arg0 + 1].setTranslationX(-1 * convertDpToPixel((int) (34 * arg1), getApplicationContext()));
+                Log.d("onPageScrolled arg0", "onPageScrolled: " + arg0
+                        + " ; tmp1 = " + tmp1
+                        + " ; tmp2 = " + tmp2
+                );
             }
         }
 
@@ -147,9 +152,9 @@ public class BoardingActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_boarding);
 
-        viewPager = (ViewPager) findViewById(R.id.view_pager);
-        dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
-        btnNext = (Button) findViewById(R.id.btn_next);
+        viewPager = findViewById(R.id.view_pager);
+        dotsLayout = findViewById(R.id.layoutDots);
+        btnNext = findViewById(R.id.btn_next);
         /**
          * layouts of all welcome sliders
          * add few more layouts if you want
@@ -162,18 +167,22 @@ public class BoardingActivity extends AppCompatActivity {
 
         dots = new TextView[layouts.length];
 
-        // dotsLayout.removeAllViews();
+        dotsLayout.removeAllViews();
         for (int i = 0; i < dots.length; i++) {
             dots[i] = new TextView(this);
             dots[i].setBackground(getResources().getDrawable(R.drawable.icx_dot_inactive));
-            dots[i].setWidth(convertDpToPixel(10, getApplicationContext()));
-            dots[i].setHeight(convertDpToPixel(10, getApplicationContext()));
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.WRAP_CONTENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT
+            dots[i].setWidth(convertDpToPixel(8, getApplicationContext()));
+            dots[i].setHeight(convertDpToPixel(8, getApplicationContext()));
+
+            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                    RelativeLayout.LayoutParams.WRAP_CONTENT,
+                    RelativeLayout.LayoutParams.WRAP_CONTENT
             );
-            int margin = convertDpToPixel(12, getApplicationContext());
-            params.setMargins(margin, 0, margin, 0);
+
+            int margin = convertDpToPixel(i * 25, getApplicationContext());
+
+            params.setMargins(margin, 0, 0, 0);
+            params.addRule(RelativeLayout.CENTER_VERTICAL);
             dots[i].setLayoutParams(params);
             dotsLayout.addView(dots[i]);
         }
@@ -203,6 +212,8 @@ public class BoardingActivity extends AppCompatActivity {
     private void addBottomDots(int currentPage) {
         for (int i = 0; i < dots.length; i++) {
             if (currentPage == i) {
+                dots[currentPage].setWidth(convertDpToPixel(10, getApplicationContext()));
+                dots[currentPage].setHeight(convertDpToPixel(10, getApplicationContext()));
                 dots[currentPage].setBackground(getResources().getDrawable(R.drawable.icx_dot_active));
             } else {
                 dots[i].setBackground(getResources().getDrawable(R.drawable.icx_dot_inactive));
