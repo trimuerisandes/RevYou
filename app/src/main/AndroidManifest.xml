@@ -19,6 +19,10 @@
         <activity android:name="com.rievoluzione.revyou.activities.PrimaActivity"></activity>
         <activity android:name="com.rievoluzione.revyou.dialogs.DialogAcced"></activity>
         <activity android:name="com.rievoluzione.revyou.activities.Main"></activity>
+        <activity android:name=".activities.AbbonamentoActivity" />
+        <activity android:name=".activities.SuggerimentiActivity" />
+        <activity android:name=".activities.ArgomentiActivity" />
+        <activity android:name=".activities.UpgradeActivity" />
 
     </application>
 
