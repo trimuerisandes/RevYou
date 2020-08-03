@@ -34,9 +34,9 @@
             android:numColumns="2"
             android:scrollbars="none"
             android:stretchMode="columnWidth"
-            android:verticalSpacing="10dp"
-            android:horizontalSpacing="@dimen/margin_10dp"
-            android:padding="@dimen/margin_20dp"
+            android:verticalSpacing="13dp"
+            android:horizontalSpacing="13dp"
+            android:padding="@dimen/margin_17dp"
 
             />
 

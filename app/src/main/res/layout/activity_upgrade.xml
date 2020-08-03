@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close"
+                android:padding="20dp"
+                android:layout_gravity="right"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:fontFamily="@font/raleway_semibold"
+                android:text="Effettua l'upgrade!"
+                android:textColor="@color/colorTextdark"
+                android:textSize="28dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/sub_text"
+                android:text="Paghi solo la differenza tra l'abbonamento precedente e quello nuovo."
+                android:lineHeight="34dp"
+                android:textSize="16sp"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/open_sans_regular"/>
+
+
+
+            <LinearLayout
+                android:id="@+id/packageStarting"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginHorizontal="17dp"
+
+                android:orientation="horizontal"
+                android:background="@drawable/bg_color"
+                android:paddingTop="-15dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="41dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Abbonamento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="@string/Abbonamento" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:text="@string/Pagamento"
+                        android:textColor="@color/colorTextDark1"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/colorBorderDivider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/open_sans_regular"
+                            android:text="A Soli"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_bold"
+                            android:text="14,99€"
+                            android:textSize="21dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_light"
+                            android:text="AL MESE"
+                            android:textSize="10dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/packageStarting2"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/bgx_gray_card"
+                android:paddingTop="-15dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_30dp"
+                    android:layout_marginTop="@dimen/margin_30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="@string/Abbonamento" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:text="@string/Pagamento"
+                        android:textColor="@color/colorTextDark1"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="@dimen/margin_20dp"
+                    android:layout_marginLeft="@dimen/margin_20dp"
+                    android:background="@color/colorBorderDivider" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:text="A Soli"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_bold"
+                        android:text="14,99€"
+                        android:textSize="21dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_light"
+                        android:text="AL MESE"
+                        android:textSize="10dp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="@dimen/margin_30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_noted"
+                    android:drawablePadding="25dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="365 Sintesi di articoli scientifici l’anno"
+                    android:textSize="12dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_profile"
+                    android:drawablePadding="22dp"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="30 Fisioterapisti esperti a tua disposizione"
+                    android:textSize="12dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_comment"
+                    android:drawablePadding="25dp"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="20 Argomenti di interesse trattati"
+                    android:textSize="12dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_check"
+                    android:drawablePadding="25dp"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="Elenco corsi sempre aggiornato"
+                    android:textSize="12dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_bell"
+                    android:drawablePadding="25dp"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="Gestisci e personalizza le tue notifiche"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnProva"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prova gratis 7 Giorni!"
+                android:fontFamily="@font/opensans_light"
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp"
+                android:elegantTextHeight="true"
+                android:layout_marginHorizontal="@dimen/margin_20dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="@dimen/margin_20dp"
+                android:background="@drawable/buttone1"
+
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

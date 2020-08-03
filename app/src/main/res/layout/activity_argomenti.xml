@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingBottom="20dp"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="25dp"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="20dp">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_back"/>
+
+        <LinearLayout
+            android:id="@+id/parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_back"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="38dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/id_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:text="Argomenti"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/raleway_bold"
+                    android:textColor="@color/text"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reimposta"
+                    android:layout_gravity="right|center"/>
+
+            </LinearLayout>
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Testa e ATM"
+                android:textSize="16sp"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:textColor="@color/text"/>
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rachide cervicale"
+                android:textSize="16sp"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:textColor="@color/text"/>
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Spalla"
+                android:textSize="16sp"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:textColor="@color/text"/>
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gomito"
+                android:textSize="16sp"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:textColor="@color/text"/>
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Polso e mano"
+                android:textSize="16sp"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:textColor="@color/text"/>
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rachide dorsale e coste"
+                android:textSize="16sp"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:textColor="@color/text"/>
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rachide lombare e pelvi"
+                android:textSize="16sp"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:textColor="@color/text"/>
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Anca"
+                android:textSize="16sp"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:textColor="@color/text"/>
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ginocchio"
+                android:textSize="16sp"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:textColor="@color/text"/>
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Caviglia e piede"
+                android:textSize="16sp"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:textColor="@color/text"/>
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diagnosi differenziale"
+                android:textSize="16sp"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:textColor="@color/text"/>
+
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Invia"
+            android:textSize="16sp"
+            android:textColor="@color/colorWhite"
+            android:textAllCaps="false"
+            android:layout_below="@id/parent"
+
+            android:background="@drawable/bgx_btn_rounded_blue"
+            android:layout_alignParentBottom="true"/>
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

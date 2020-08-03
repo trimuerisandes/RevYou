@@ -29,8 +29,8 @@
             android:src="@drawable/ic_add"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="13dp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -40,8 +40,8 @@
             android:fontFamily="@font/open_sans_regular"
             android:layout_above="@+id/parent"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="15dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginBottom="9dp"
             android:text="21 Set 20"/>
 
 
@@ -50,8 +50,8 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/parent"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginBottom="9dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
@@ -78,7 +78,7 @@
             android:id="@+id/parent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_margin="13dp"
             android:background="@android:color/white"
             android:layout_below="@+id/image">
 
