@@ -1,4 +1,4 @@
-package com.app.revyou.activities;
+package com.rievoluzione.revyou.activities;
 
 import android.content.Context;
 import android.content.Intent;
