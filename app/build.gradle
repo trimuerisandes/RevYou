@@ -9,8 +9,8 @@ android {
     buildToolsVersion "30.0.0"
 
     defaultConfig {
-        applicationId "com.app.revyou"
-        minSdkVersion 25
+        applicationId "com.rievoluzione.revyou"
+        minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"

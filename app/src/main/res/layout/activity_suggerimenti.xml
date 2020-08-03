@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginVertical="25dp"
+    android:orientation="vertical"
+
+    android:layout_marginHorizontal="20dp">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_back"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/id_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="Suggerimenti"
+            android:textStyle="bold"
+
+            android:fontFamily="@font/raleway_bold"
+            android:textColor="@color/text"/>
+
+        <TextView
+            android:id="@+id/txt_rinnovo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Se hai qualche idea per migliorare RevYou scrivi qui sotto e dicci la tua."
+            android:textSize="16sp"
+            android:lineHeight="34sp"
+            android:fontFamily="@font/open_sans_regular"
+            android:layout_marginTop="28dp"
+            android:textColor="@color/text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_title"
+            android:text="Hai idee o suggerimenti riguardanti la app?"
+            android:textSize="16sp"
+            android:lineHeight="34sp"
+            android:fontFamily="@font/open_sans_regular"
+            android:layout_marginTop="28dp"
+            android:textColor="@color/text"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/bg_edittext">
+            
+            <EditText
+                android:id="@+id/id_suggerimenti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="3"
+                android:hint="Scrivi..."
+                android:textColorHint="@color/blue"
+                android:background="@null"
+                android:lineHeight="19sp"
+                android:textSize="14sp"
+                android:fontFamily="@font/open_sans_regular"
+                android:gravity="top"
+                android:padding="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:lineHeight="17sp"
+                android:text="0/120"
+                android:textColor="@color/blue"
+                android:layout_below="@id/id_suggerimenti"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12sp"
+                android:layout_marginBottom="9dp"
+                android:fontFamily="@font/open_sans_regular"/>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:text="Invia"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        android:textAllCaps="false"
+        android:background="@drawable/bgx_btn_rounded_blue"
+        android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>

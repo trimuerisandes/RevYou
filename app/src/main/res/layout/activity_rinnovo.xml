@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginVertical="25dp"
+    android:orientation="vertical"
+
+    android:layout_marginHorizontal="20dp">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:src="@drawable/ic_back"/>
+
+    <TextView
+        android:id="@+id/btn_cambia_piano"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="Gestisci il tuo rinnovo"
+        android:textStyle="bold"
+        android:fontFamily="@font/raleway_bold"
+        android:textColor="@color/text"/>
+
+    <TextView
+        android:id="@+id/txt_rinnovo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="In questa sezione puoi disdire il rinnovo del
+tuo abbonamento. Clicca qui per effettuare
+la disdetta. Oppure Clicca qui per tornare a
+navigare all’interno di RevYou."
+        android:textSize="16sp"
+        android:lineHeight="34sp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:layout_marginTop="28dp"
+        android:textColor="@color/text"/>
+
+
+
+
+</LinearLayout>
