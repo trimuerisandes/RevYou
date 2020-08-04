@@ -1,89 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-<RelativeLayout
-    android:layout_width="match_parent"
     android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/create"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Crea un account"
-        android:fontFamily="@font/raleway_semibold"
-        android:textSize="28sp"/>
-    <TextView
-        android:id="@+id/Rivo"
-        android:layout_below="@+id/create"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:layout_marginTop="@dimen/margin_20dp"
-        android:text="Rivoluziona il tuo modo di imparare"
-        android:fontFamily="@font/raleway_semibold"/>
 
-
-    <EditText
-        android:layout_below="@+id/Rivo"
-        android:id="@+id/name"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:hint="Nome e cognome"
-        android:fontFamily="@font/open_sans_regular"
-        android:textSize="14sp"
-        android:paddingLeft="@dimen/margin_20dp"
-        android:background="@drawable/bg_edittext"
-        />
-    <EditText
-        android:layout_below="@+id/name"
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:hint="Password"
-        android:fontFamily="@font/open_sans_regular"
-        android:textSize="14sp"
-        android:paddingLeft="@dimen/margin_20dp"
-        android:background="@drawable/bg_edittext"
-        />
+        android:layout_height="wrap_content">
 
-    <CheckBox
-        android:id="@+id/checkbox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:outlineSpotShadowColor="@color/textBlue"
-        android:buttonTint="@color/textBlue"
-        android:paddingLeft="12sp"
-        android:layout_marginTop="@dimen/margin_20dp"
-        android:fontFamily="@font/open_sans_regular"
-        android:textSize="@dimen/margin_14dp"
-        android:textColor="@color/text"
-        android:text="Voglio essere aggiornato sulla pubblicazione di nuovi contenuti ed offerte promozionali di Revyou"
-        android:layout_below="@id/password"/>
+        <TextView
+            android:id="@+id/create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Crea un account"
+            android:textSize="28sp" />
 
-    <CheckBox
-        android:id="@+id/checkbox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:outlineSpotShadowColor="@color/textBlue"
-        android:buttonTint="@color/textBlue"
-        android:paddingLeft="12sp"
-        android:textColor="@color/text"
-        android:layout_marginTop="@dimen/margin_20dp"
-        android:fontFamily="@font/open_sans_regular"
-        android:textSize="@dimen/margin_14dp"
-        android:text="Accetto le clausole vessatorie di Revyou."
-        android:layout_below="@id/checkbox1"/>
+        <TextView
+            android:id="@+id/Rivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/create"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Rivoluziona il tuo modo di imparare"
+            android:textSize="16sp" />
 
-    <TextView
-        android:layout_below="@+id/checkbox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_40dp"
-        android:text="Cliccando su continua accetto i Termini e Condizioni e la Privacy Policy di Revyou."
-        android:textColor="@color/text"
-        android:textSize="12sp"/>
-</RelativeLayout>
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Rivo"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/bg_edittext"
+            android:fontFamily="@font/open_sans_regular"
+            android:hint="Nome e cognome"
+            android:paddingLeft="@dimen/margin_20dp"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_edittext"
+            android:fontFamily="@font/open_sans_regular"
+            android:hint="Password"
+            android:paddingLeft="@dimen/margin_20dp"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:id="@+id/checkbox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:buttonTint="@color/textBlue"
+            android:fontFamily="@font/open_sans_regular"
+            android:outlineSpotShadowColor="@color/textBlue"
+            android:paddingLeft="12sp"
+            android:text="Voglio essere aggiornato sulla pubblicazione di nuovi contenuti ed offerte promozionali di Revyou"
+            android:textColor="@color/text"
+            android:textSize="@dimen/margin_14dp" />
+
+        <CheckBox
+            android:id="@+id/checkbox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkbox1"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:buttonTint="@color/textBlue"
+            android:fontFamily="@font/open_sans_regular"
+            android:outlineSpotShadowColor="@color/textBlue"
+            android:paddingLeft="12sp"
+            android:text="Accetto le clausole vessatorie di Revyou."
+            android:textColor="@color/text"
+            android:textSize="@dimen/margin_14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkbox2"
+            android:layout_marginTop="@dimen/margin_40dp"
+            android:text="Cliccando su continua accetto i Termini e Condizioni e la Privacy Policy di Revyou."
+            android:textColor="@color/text"
+            android:textSize="12sp" />
+    </RelativeLayout>
 </ScrollView>
