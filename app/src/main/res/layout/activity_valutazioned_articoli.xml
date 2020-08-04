@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layoutPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="19dp"
+            android:orientation="vertical"
+            android:paddingBottom="48.5dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="28dp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:fontFamily="@font/raleway_bold"
+                android:lineSpacingExtra="9sp"
+                android:text="Valutazione articoli"
+                android:textColor="#585858"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="41dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:lineHeight="34dp"
+                android:lineSpacingExtra="18sp"
+                android:text="@string/valutazione_articoli"
+                android:textColor="#585858"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="28dp"
+                android:drawableLeft="@drawable/icx_dot"
+                android:drawablePadding="17dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:lineSpacingExtra="18sp"
+                android:text="lo studio è valido?"
+                android:textColor="#585858"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="28dp"
+                android:drawableLeft="@drawable/icx_dot"
+                android:drawablePadding="17dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:lineSpacingExtra="18sp"
+                android:text="i risultati dello studio sono clinicamente
+rilevanti?"
+                android:textColor="#585858"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="28dp"
+                android:drawableLeft="@drawable/icx_dot"
+                android:drawablePadding="17dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:lineSpacingExtra="18sp"
+                android:text="i risultati dello studio sono applicabili?"
+                android:textColor="#585858"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="41dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:lineHeight="34dp"
+                android:lineSpacingExtra="18sp"
+                android:text="@string/valutazione_articoli_2"
+                android:textColor="#585858"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

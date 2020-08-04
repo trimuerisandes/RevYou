@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layoutPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="19dp"
+            android:orientation="vertical"
+            android:paddingBottom="48.5dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="28dp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="21dp"
+                android:fontFamily="@font/raleway_bold"
+                android:lineSpacingExtra="9sp"
+                android:text="Praticità"
+                android:textColor="#585858"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:lineHeight="34dp"
+                android:lineSpacingExtra="18sp"
+                android:text="Tale assegnazione deriva dal giudizio personale di chi elabora gli approfondimenti, espresso in una scala da 0 a 5 creata ad hoc."
+                android:textColor="#585858"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/link_valutazione_articoli"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="62dp"
+                android:drawableRight="@drawable/ic_back_reverse"
+                android:drawablePadding="9dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:lineSpacingExtra="18sp"
+                android:text="Scopri il metodo RevYou"
+                android:textColor="#168be6"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="38dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="31dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:lineSpacingExtra="20sp"
+                        android:text="Score"
+                        android:textAllCaps="true"
+                        android:textColor="#ff8b5a"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:lineSpacingExtra="6sp"
+                        android:text="1/5"
+                        android:textAllCaps="true"
+                        android:textColor="#ff8b5a"
+                        android:textSize="31sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:lineHeight="34dp"
+                    android:lineSpacingExtra="20sp"
+                    android:text="Le conclusioni non sono trasferibili nella pratica clinica. I contenuti non
+impattano minimamente sull’agire del fisioterapista."
+                    android:textColor="#585858"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="38dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="31dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:lineSpacingExtra="20sp"
+                        android:text="Score"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_orange"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:lineSpacingExtra="6sp"
+                        android:text="2/5"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_orange"
+                        android:textSize="31sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:lineHeight="34dp"
+                    android:lineSpacingExtra="20sp"
+                    android:text="Le conclusioni sono incomplete rispetto alla loro trasferibilità clinica. I
+contenuti impattano minimamente sull’agire del fisioterapista."
+                    android:textColor="#585858"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="38dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="31dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:lineSpacingExtra="20sp"
+                        android:text="Score"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_yellow"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:lineSpacingExtra="6sp"
+                        android:text="3/5"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_yellow"
+                        android:textSize="31sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:lineHeight="34dp"
+                    android:lineSpacingExtra="20sp"
+                    android:text="Le conclusioni sono parzialmente trasferibili nella pratica clinica. I contenuti impattano parzialmente sull’agire del fisioterapista."
+                    android:textColor="#585858"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="38dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="31dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:lineSpacingExtra="20sp"
+                        android:text="Score"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_green_light"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:lineSpacingExtra="6sp"
+                        android:text="4/5"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_green_light"
+                        android:textSize="31sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:lineHeight="34dp"
+                    android:lineSpacingExtra="20sp"
+                    android:text="Le conclusioni sono trasferibili nella pratica clinica, a determinate
+condizioni. I contenuti impattano sull’agire del fisioterapista."
+                    android:textColor="#585858"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="38dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="31dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:lineSpacingExtra="20sp"
+                        android:text="Score"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_green"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:lineSpacingExtra="6sp"
+                        android:text="5/5"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_green"
+                        android:textSize="31sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:lineHeight="34dp"
+                    android:lineSpacingExtra="20sp"
+                    android:text="Le conclusioni sono interamente trasferibili nella pratica clinica. I contenuti impattano significativamente sull’agire del fisioterapista"
+                    android:textColor="#585858"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

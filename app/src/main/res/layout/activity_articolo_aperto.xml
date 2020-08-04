@@ -254,6 +254,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:id="@+id/layout_a_cura_di"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
@@ -285,6 +286,7 @@
                         android:background="#ccc" />
 
                     <LinearLayout
+                        android:id="@+id/layout_pubblic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">

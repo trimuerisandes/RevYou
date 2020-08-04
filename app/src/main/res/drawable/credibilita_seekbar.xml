@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="center_vertical">
+        <scale android:scaleWidth="20%">
+            <shape
+                android:shape="rectangle"
+                android:tint="#ff8450">
+                <corners android:radius="8dp" />
+                <size android:height="30dp" />
+                <solid android:color="#ff8450" />
+            </shape>
+        </scale>
+    </item>
+    <item android:gravity="center_vertical">
+        <scale android:scaleWidth="40%">
+            <shape
+                android:shape="rectangle"
+                android:tint="#ffb717">
+                <corners android:radius="8dp" />
+                <size android:height="30dp" />
+                <solid android:color="#ffb717" />
+            </shape>
+        </scale>
+    </item>
+    <item android:gravity="center_vertical">
+        <scale android:scaleWidth="60%">
+            <shape
+                android:shape="rectangle"
+                android:tint="#fee509">
+                <corners android:radius="8dp" />
+                <size android:height="30dp" />
+                <solid android:color="#fee509" />
+            </shape>
+        </scale>
+    </item>
+    <item android:gravity="center_vertical">
+        <scale android:scaleWidth="80%">
+            <shape
+                android:shape="rectangle"
+                android:tint="#90e826">
+                <corners android:radius="8dp" />
+                <size android:height="30dp" />
+                <solid android:color="#90e826" />
+            </shape>
+        </scale>
+    </item>
+    <item android:gravity="center_vertical">
+        <scale android:scaleWidth="100%">
+            <shape
+                android:shape="rectangle"
+                android:tint="#89cd56">
+                <corners android:radius="8dp" />
+                <size android:height="30dp" />
+                <solid android:color="#89cd56" />
+            </shape>
+        </scale>
+    </item>
+</layer-list>
