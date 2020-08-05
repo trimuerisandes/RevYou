@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.rievoluzione.revyou.activities.AperturaActivity">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".activities.BoardingActivity"></activity>
         <activity android:name="com.rievoluzione.revyou.activities.MainActivity"></activity>
@@ -25,12 +28,7 @@
         <activity android:name=".activities.InfoCredibilitaActivity" />
         <activity android:name=".activities.InfoPraticitaActivity" />
         <activity android:name=".activities.ValutazionedArticoliActivity" />
-        <activity android:name=".activities.IntroduzioneActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".activities.IntroduzioneActivity"></activity>
     </application>
 
 </manifest>
