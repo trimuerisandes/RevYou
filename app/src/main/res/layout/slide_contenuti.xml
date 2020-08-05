@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="19dp"
+    android:paddingEnd="11dp"
+    android:paddingTop="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
+        android:fontFamily="@font/raleway_bold"
+        android:lineSpacingExtra="9sp"
+        android:text="Contenuti"
+        android:textColor="#585858"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="11sp"
+        android:lineHeight="27sp"
+        android:text="Il trattamento conservativo nella tendinopatia laterale di gomito è considerato l'approccio più efficace nella risoluzione dei sintomi. Tuttavia, in letteratura mancano dei riferimenti specifici e quantitativi sulle strategie più efficaci nella gestione di questi soggetti. Gli autori hanno indagato esclusivamente l'efficacia delle mobilizzazioni e delle manipolazioni articolari; in particolare sono stati indagati i trial che analizzavano gli effetti delle Mobilizzazioni con movimento e della manipolazione di Mill, una tecnica articolare definita High-velocity-low amplitude. Questi due approcci risultano essere efficaci nella riduzione del dolore e nel miglioramento della forza nel breve e medio termine. Nella maggior parte degli studi selezionati, le Mobilizzazioni con movimento e la manipolazione di Mill venivano somministrate 3 volte a settimana per 4 settimane. Inoltre, è stata analizzata l'efficacia delle manipolazioni regionali – cervicali e toraciche in particolare – nella riduzione dei sintomi; nonostante ciò, a causa di una numerosità campionaria ridotta e dell'eterogeneità dei soggetti inclusi negli studi non è stato possibile inserire questi ultimi studi all'interno del processo di metanalisi. Gli autori raccomandano, quindi, l'uso delle Mobilizzazioni con movimento, della manipolazione di Mill e delle manipolazioni spinali regionali, sempre in associazione all'esercizio terapeutico."
+        android:textColor="#7b7b7b"
+        android:textSize="16sp" />
+</LinearLayout>
