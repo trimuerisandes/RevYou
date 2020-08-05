@@ -8,6 +8,7 @@ import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -28,6 +29,8 @@ public class ArticoloApertoActivity extends Activity {
     @BindView(R.id.recylerview_articolo_correlati)
     RecyclerView m_articolo_correlati;
 
+    @BindView(R.id.btnLeggi)
+    Button m_btn_leggi;
     @BindView(R.id.layout_a_cura_di)
     LinearLayout m_layout_a_cura_di;
     @BindView(R.id.layout_pubblic)
@@ -51,6 +54,10 @@ public class ArticoloApertoActivity extends Activity {
         m_layout_pubblic.setOnClickListener(v -> fab_onclick(R.style.DialogScale, "Scale",
                 this, getWindow().getDecorView().getRootView(), R.layout.activity_dialog_pubblicazione)
         );
+
+        m_btn_leggi.setOnClickListener(v -> {
+            startActivity(new Intent(this, IntroduzioneActivity.class));
+        });
     }
 
     @OnClick(R.id.btnBack)
