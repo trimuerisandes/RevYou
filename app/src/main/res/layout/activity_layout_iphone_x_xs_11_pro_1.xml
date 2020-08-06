@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#f5f5f5">
 
     <RelativeLayout
@@ -126,11 +126,10 @@
             android:gravity="center_vertical"
             android:orientation="horizontal" />
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/layoutPlayer"
             android:layout_width="match_parent"
-            android:layout_height="66dp"
-            android:visibility="visible"
+            android:layout_height="0dp"
             android:layout_alignParentBottom="true"
             android:background="@color/colorWhite"
             android:orientation="vertical">
@@ -138,23 +137,16 @@
             <com.zhouyou.view.seekbar.SignSeekBar
                 android:id="@+id/seek_bar"
                 android:layout_width="match_parent"
-                android:layout_height="16dp"
-                android:layout_marginHorizontal="20dp"
-                app:ssb_auto_adjust_section_mark="true"
-                app:ssb_is_float_type="true"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                app:ssb_sign_height="1dp"
                 app:ssb_progress="25"
                 app:ssb_second_track_color="@color/blue"
-                app:ssb_section_count="5"
-                app:ssb_show_progress_in_float="true"
-                app:ssb_show_sign="true"
-                app:ssb_show_thumb_shadow="true"
-                app:ssb_show_thumb_text="false"
-
+                app:ssb_show_sign="false"
                 app:ssb_sign_color="@android:color/transparent"
-                app:ssb_sign_height="15dp"
                 app:ssb_sign_show_border="false"
                 app:ssb_sign_text_color="@color/blue"
-                app:ssb_thumb_ratio="0.5"
+                app:ssb_thumb_ratio="1"
                 app:ssb_track_color="#dbdbdb" />
 
             <LinearLayout
@@ -162,6 +154,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="42dp"
                 android:layout_marginTop="7dp"
+                android:layout_centerVertical="true"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -200,6 +193,6 @@
                     android:textColor="#585858"
                     android:textSize="12sp" />
             </LinearLayout>
-        </LinearLayout>
+        </RelativeLayout>
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

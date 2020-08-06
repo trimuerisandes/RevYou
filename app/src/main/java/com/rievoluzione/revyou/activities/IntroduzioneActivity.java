@@ -51,6 +51,8 @@ public class IntroduzioneActivity extends AppCompatActivity {
     boolean isTestoClicked = false;
     boolean isCuffieClicked = false;
     boolean isCondividiClicked = false;
+    @BindView(R.id.layoutPlayer)
+    RelativeLayout m_layoutPlayer;
     private MyViewPagerAdapter myViewPagerAdapter;
     private TextView[] dots;
     private int[] layouts;
@@ -182,10 +184,22 @@ public class IntroduzioneActivity extends AppCompatActivity {
     void clickCuffie() {
         if (!isCuffieClicked) {
             m_imv_cuffie.setImageResource(R.drawable.ic_mask_group_30);
+            RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(
+                    RelativeLayout.LayoutParams.MATCH_PARENT,
+                    convertDpToPixel(66, getApplicationContext())
+            );
+            layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+            m_layoutPlayer.setLayoutParams(layoutParams);
             this.isCuffieClicked = true;
         } else {
             this.isCuffieClicked = false;
             m_imv_cuffie.setImageResource(R.drawable.ic_cuffie);
+            RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(
+                    RelativeLayout.LayoutParams.MATCH_PARENT,
+                    convertDpToPixel(0, getApplicationContext())
+            );
+            layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+            m_layoutPlayer.setLayoutParams(layoutParams);
         }
     }
 
