@@ -18,6 +18,7 @@
         android:textSize="25sp" />
 
     <TextView
+        android:id="@+id/il_parere_text1"
         android:layout_width="wrap_content"
         android:layout_height="352dp"
         android:lineSpacingExtra="11sp"
@@ -37,6 +38,7 @@
         android:textSize="25sp" />
 
     <TextView
+        android:id="@+id/il_parere_text2"
         android:layout_width="wrap_content"
         android:layout_height="234dp"
         android:lineSpacingExtra="11sp"

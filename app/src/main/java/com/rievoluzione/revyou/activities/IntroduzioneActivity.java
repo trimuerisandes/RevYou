@@ -1,11 +1,15 @@
 package com.rievoluzione.revyou.activities;
 
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -102,11 +106,11 @@ public class IntroduzioneActivity extends AppCompatActivity {
                 int margin = convertDpToPixel(31, getApplicationContext());
                 params.setMargins(margin, 0, margin, 0);
             } else if (i == 0) {
-                int margin = convertDpToPixel(45, getApplicationContext());
-                params.setMargins(margin, 0, 31, 0);
+                int margin = convertDpToPixel(31, getApplicationContext());
+                params.setMargins(0, 0, margin, 0);
             } else {
-                int margin = convertDpToPixel(45, getApplicationContext());
-                params.setMargins(32, 0, margin, 0);
+                int margin = convertDpToPixel(31, getApplicationContext());
+                params.setMargins(margin, 0, 0, 0);
             }
 
             dots[i].setLayoutParams(params);
@@ -121,6 +125,12 @@ public class IntroduzioneActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 changeDotPosition(position);
+                if (position == (lengthdots - 1)) {
+
+                    openDialog(R.style.DialogScale, "Scale",
+                            IntroduzioneActivity.this, getWindow().getDecorView().getRootView(),
+                            R.layout.activity_dialog_come_valuti_questo);
+                }
             }
 
             @Override
@@ -137,6 +147,69 @@ public class IntroduzioneActivity extends AppCompatActivity {
         myViewPagerAdapter = new MyViewPagerAdapter();
         viewPager.setAdapter(myViewPagerAdapter);
         viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
+
+    }
+
+    private void openDialog(int type, String message, Activity activity, View view, int layoutId) {
+
+        if (view == null) {
+
+        } else {
+            //then we will inflate the custom alert dialog xml that we created
+            View dialogView = LayoutInflater.from(view.getContext()).inflate(layoutId, null, false);
+
+
+            //Now we need an AlertDialog.Builder object
+            AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+
+            //setting the view of the builder to our custom view that we already inflated
+            builder.setView(dialogView);
+
+
+            //finally creating the alert dialog and displaying it
+            final AlertDialog alertDialog = builder.create();
+
+
+            // Get screen width and height in pixels
+            DisplayMetrics displayMetrics = new DisplayMetrics();
+            activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+            // The absolute width of the available display size in pixels.
+            int displayWidth = displayMetrics.widthPixels;
+            // The absolute height of the available display size in pixels.
+            int displayHeight = displayMetrics.heightPixels;
+
+            // Initialize a new window manager layout parameters
+            WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
+
+            // Copy the alert dialog window attributes to new layout parameter instance
+            layoutParams.copyFrom(alertDialog.getWindow().getAttributes());
+
+
+            // Set alert dialog width equal to screen width 70%
+            int dialogWindowWidth = (int) (displayWidth * 0.9f);
+            // Set alert dialog height equal to screen height 70%
+            int dialogWindowHeight = (int) (displayHeight * 0.9f);
+
+            layoutParams.width = dialogWindowWidth;
+            layoutParams.height = dialogWindowHeight;
+
+
+            // Apply the newly created layout parameters to the alert dialog window
+            alertDialog.getWindow().setAttributes(layoutParams);
+            RelativeLayout lyt = dialogView.findViewById(R.id.root_layout);
+
+            lyt.setOnClickListener(view1 -> alertDialog.dismiss());
+
+            ImageView btnClose = dialogView.findViewById(R.id.btnClose);
+            btnClose.setOnClickListener(v -> alertDialog.dismiss());
+
+            alertDialog.getWindow().setBackgroundDrawable(null);
+            alertDialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+            alertDialog.getWindow().getAttributes().windowAnimations = type;
+            alertDialog.setCancelable(true);
+            alertDialog.show();
+
+        }
 
     }
 
@@ -186,7 +259,7 @@ public class IntroduzioneActivity extends AppCompatActivity {
             m_imv_cuffie.setImageResource(R.drawable.ic_mask_group_30);
             RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(
                     RelativeLayout.LayoutParams.MATCH_PARENT,
-                    convertDpToPixel(66, getApplicationContext())
+                    convertDpToPixel(128, getApplicationContext())
             );
             layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
             m_layoutPlayer.setLayoutParams(layoutParams);
@@ -196,7 +269,7 @@ public class IntroduzioneActivity extends AppCompatActivity {
             m_imv_cuffie.setImageResource(R.drawable.ic_cuffie);
             RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(
                     RelativeLayout.LayoutParams.MATCH_PARENT,
-                    convertDpToPixel(0, getApplicationContext())
+                    0
             );
             layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
             m_layoutPlayer.setLayoutParams(layoutParams);
@@ -228,6 +301,12 @@ public class IntroduzioneActivity extends AppCompatActivity {
             layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
             View view = layoutInflater.inflate(layouts[position], container, false);
+            if (position == (layouts.length - 1)) {
+                TextView text1 = view.findViewById(R.id.il_parere_text1);
+                text1.setText(Html.fromHtml(getResources().getString(R.string.il_parere)));
+                TextView text2 = view.findViewById(R.id.il_parere_text2);
+                text2.setText(Html.fromHtml(getResources().getString(R.string.il_parere)));
+            }
             container.addView(view);
 
             return view;
