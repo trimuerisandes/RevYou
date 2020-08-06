@@ -123,7 +123,7 @@
             android:layout_height="66dp"
             android:layout_above="@id/layoutPlayer"
             android:background="@color/colorWhite"
-            android:gravity="center_vertical"
+            android:gravity="center_vertical|center_horizontal"
             android:orientation="horizontal" />
 
         <RelativeLayout
@@ -150,6 +150,7 @@
                 app:ssb_track_color="#dbdbdb" />
 
             <LinearLayout
+                android:layout_below="@id/seek_bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="42dp"
