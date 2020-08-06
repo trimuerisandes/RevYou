@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dialog">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/pic_austin_distel" />
+
+            <ImageView
+                android:id="@+id/btnClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_close" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Dott. Marco Rossi"
+            android:textAlignment="center"
+            android:textColor="@color/colorTextdark"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="22sp"
+            android:text="Fisioterapista, ompt, msc"
+            android:textAllCaps="true"
+            android:fontFamily="@font/open_sans_regular"
+            android:textColor="#bebebe"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="20sp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Libero professionista presso:"
+            android:textColor="#585858"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:drawableLeft="@drawable/pic_mask_group_34"
+            android:drawablePadding="5dp"
+            android:lineSpacingExtra="20sp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Presso studio Rossi, Ascoli Picerno"
+            android:textColor="#585858"
+            android:textSize="14sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="47dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginBottom="36dp"
+            android:background="@drawable/bgx_btn_rounded_blue"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="8 sintesi pubblicate"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+</RelativeLayout>

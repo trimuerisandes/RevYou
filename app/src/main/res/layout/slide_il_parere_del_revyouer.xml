@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="19dp"
+    android:paddingEnd="11dp"
+    android:paddingTop="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
+        android:fontFamily="@font/raleway_bold"
+        android:lineSpacingExtra="9sp"
+        android:text="Il parere del Revyouer"
+        android:textColor="#585858"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="352dp"
+        android:lineSpacingExtra="11sp"
+        android:text="@string/il_parere"
+        android:textColor="#7b7b7b"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
+        android:layout_marginTop="41dp"
+        android:fontFamily="@font/raleway_bold"
+        android:lineSpacingExtra="9sp"
+        android:text="Extra"
+        android:textColor="#585858"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="234dp"
+        android:lineSpacingExtra="11sp"
+        android:text="@string/il_parere"
+        android:textColor="#7b7b7b"
+        android:textSize="16sp" />
+</LinearLayout>

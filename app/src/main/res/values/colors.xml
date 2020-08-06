@@ -20,7 +20,11 @@
     <color name="textBlue">#168BE6</color>
     <color name="bgButton">#E6E6E6</color>
     <color name="div">#11707070</color>
-
+    <color name="color_amber">#ff8450</color>
+    <color name="color_orange">#ffb717</color>
+    <color name="color_yellow">#fee509</color>
+    <color name="color_green_light">#90e826</color>
+    <color name="color_green">#89cd56</color>
 
 
 </resources>

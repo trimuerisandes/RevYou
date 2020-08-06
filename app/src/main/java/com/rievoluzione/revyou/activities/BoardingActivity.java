@@ -23,6 +23,7 @@ import com.rievoluzione.revyou.R;
 
 public class BoardingActivity extends AppCompatActivity {
 
+    public int cur_position = 0;
     ViewPager.PageTransformer pageTransformer = new ViewPager.PageTransformer() {
         private static final float MIN_SCALE = 0.85f;
         private static final float MIN_ALPHA = 0.5f;
@@ -31,7 +32,7 @@ public class BoardingActivity extends AppCompatActivity {
         public void transformPage(@NonNull View view, float position) {
             int pageWidth = view.getWidth();
             int pageHeight = view.getHeight();
-            Log.d("transformPage", "transformPage: " + pageWidth);
+            Log.d("transformPage", "transformPage: " + pageWidth + " -> " + position);
 
             if (position < -1) { // [-Infinity,-1)
                 // This page is way off-screen to the left.
@@ -73,7 +74,8 @@ public class BoardingActivity extends AppCompatActivity {
 
         @Override
         public void onPageSelected(int position) {
-
+            Log.d("transformPage", "onPageSelected: " + " -> " + position);
+            cur_position = position;
         }
 
         @Override
@@ -83,13 +85,14 @@ public class BoardingActivity extends AppCompatActivity {
                     "arg1 = " + arg1 + " ; " +
                     "arg2 = " + arg2 + " ; "
             );
-
             if (arg1 > 0) {
                 int tmp1 = (int) ((arg0 + 1) * 25 * arg1);
                 int tmp2 = -1 * (int) (25 * (arg1));
 
-                dots[0].setTranslationX(convertDpToPixel(tmp1, getApplicationContext()));
-                dots[arg0+1].setTranslationX(convertDpToPixel(tmp2, getApplicationContext()));
+//                dots[0].setTranslationX(convertDpToPixel(tmp1, getApplicationContext()));
+//                dots[arg0+1].setTranslationX(convertDpToPixel(tmp2, getApplicationContext()));
+                dots[arg0 + 1].setTranslationX(convertDpToPixel(tmp1, getApplicationContext()));
+                dots[arg0].setTranslationX(convertDpToPixel(tmp2, getApplicationContext()));
 
                 Log.d("onPageScrolled arg0", "onPageScrolled: " + arg0
                         + " ; tmp1 = " + tmp1
@@ -101,6 +104,11 @@ public class BoardingActivity extends AppCompatActivity {
         @Override
         public void onPageScrollStateChanged(int arg0) {
             Log.d("onPageScroll", "onPageScrollStateChanged: " + arg0);
+            if (arg0 == 1) {
+
+            } else {
+
+            }
         }
     };
     private int[] layouts;
