@@ -235,7 +235,7 @@ public class BoardingActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
         session.setFirstTimeLaunch(false);
-        startActivity(new Intent(BoardingActivity.this, MainActivity.class));
+        startActivity(new Intent(BoardingActivity.this, AuthActivity.class));
         finish();
     }
 
