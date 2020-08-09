@@ -29,6 +29,7 @@
         <activity android:name=".activities.InfoPraticitaActivity" />
         <activity android:name=".activities.ValutazionedArticoliActivity" />
         <activity android:name=".activities.IntroduzioneActivity"></activity>
+        <activity android:name=".activities.RinnovoActivity" />
     </application>
 
 </manifest>
