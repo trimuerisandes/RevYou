@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25sp"
-        android:text="Gestisci il tuo rinnovo"
+        android:text="Revyouers"
         android:textStyle="bold"
         android:fontFamily="@font/raleway_bold"
         android:textColor="@color/text"/>
@@ -28,13 +28,14 @@
         android:id="@+id/txt_rinnovo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="In questa sezione puoi disdire il rinnovo del
-tuo abbonamento. Clicca qui per effettuare
-la disdetta. Oppure Clicca qui per tornare a
-navigare all’interno di RevYou."
+        android:text="Il Nostro Team di Professionisti
+Siamo un gruppo numeroso di fisioterapisti appassionati ed attenti alla crescita della Professione. Crediamo che rimanere aggiornati sulle più recenti acquisizioni scientifiche permetta al professionista di offrire ai propri pazienti un Servizio efficace ed innovativo.
+Insieme abbiamo creato RevYou, uno strumento che i colleghi potranno facilmente utilizzare per rimanere connessi ogni giorno e condividere i segreti della nostra Professione.
+"
         android:textSize="16sp"
         android:lineHeight="34sp"
-        android:fontFamily="@font/open_sans_semibold"
+        android:textAlignment="textStart"
+        android:fontFamily="@font/open_sans_regular"
         android:layout_marginTop="28dp"
         android:textColor="@color/text"/>
 

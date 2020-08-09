@@ -1,0 +1,34 @@
+package com.rievoluzione.revyou.activities;
+
+import android.os.Bundle;
+import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.rievoluzione.revyou.R;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+public class RevyouersActivity extends AppCompatActivity {
+
+
+
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_rinnovo);
+        ButterKnife.bind(this);
+
+
+
+
+    }
+
+    @OnClick(R.id.btn_back) void back(){
+        onBackPressed();
+    }
+}
