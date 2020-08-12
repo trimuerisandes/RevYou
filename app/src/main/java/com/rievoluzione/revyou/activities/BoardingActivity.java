@@ -2,7 +2,6 @@ package com.rievoluzione.revyou.activities;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -24,6 +23,8 @@ import com.rievoluzione.revyou.R;
 public class BoardingActivity extends AppCompatActivity {
 
     public int cur_position = 0;
+    public int prev_position = 0;
+    public int moveTo = 0;
     ViewPager.PageTransformer pageTransformer = new ViewPager.PageTransformer() {
         private static final float MIN_SCALE = 0.85f;
         private static final float MIN_ALPHA = 0.5f;
@@ -50,8 +51,8 @@ public class BoardingActivity extends AppCompatActivity {
                 }
 
                 // Scale the page down (between MIN_SCALE and 1)
-//                view.setScaleX(scaleFactor);
-//                view.setScaleY(scaleFactor);
+                view.setScaleX(scaleFactor);
+                view.setScaleY(scaleFactor);
 
                 // Fade the page relative to its size.
                 view.setAlpha(MIN_ALPHA +
@@ -69,13 +70,16 @@ public class BoardingActivity extends AppCompatActivity {
     private MyViewPagerAdapter myViewPagerAdapter;
     private RelativeLayout dotsLayout;
     private TextView[] dots;
+    private int[] layouts;
     //  viewpager change listener
     ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {
 
         @Override
         public void onPageSelected(int position) {
-            Log.d("transformPage", "onPageSelected: " + " -> " + position);
-            cur_position = position;
+            dots[position].setWidth(convertDpToPixel(10, getApplicationContext()));
+            dots[position].setHeight(convertDpToPixel(10, getApplicationContext()));
+            dots[position].setBackground(getResources().getDrawable(R.drawable.icx_dot_active));
+            addBottomDots(position);
         }
 
         @Override
@@ -86,32 +90,72 @@ public class BoardingActivity extends AppCompatActivity {
                     "arg2 = " + arg2 + " ; "
             );
             if (arg1 > 0) {
-                int tmp1 = (int) ((arg0 + 1) * 25 * arg1);
-                int tmp2 = -1 * (int) (25 * (arg1));
+                int tmp1 = 0;
+                int tmp2 = 0;
+                Log.d("onPageScrolledtTOO 2", "before -> onPageScrolled: " + moveTo);
+                moveTo = (moveTo == 0) && (arg2 > 1000) ? 2 : 1;
+                Log.d("onPageScrolledtTOO 2", "onPageScrolled: => " + arg2 + " ->" + (arg2 > 1000));
+                Log.d("onPageScrolledtTOO 2", "after -> onPageScrolled: " + moveTo);
 
-//                dots[0].setTranslationX(convertDpToPixel(tmp1, getApplicationContext()));
-//                dots[arg0+1].setTranslationX(convertDpToPixel(tmp2, getApplicationContext()));
-                dots[arg0 + 1].setTranslationX(convertDpToPixel(tmp1, getApplicationContext()));
-                dots[arg0].setTranslationX(convertDpToPixel(tmp2, getApplicationContext()));
+                if (moveTo == 1) {
+                    tmp1 = (int) (25 * arg1);
+                    tmp2 = -1 * (int) (25 * (arg1));
+                } else {
+                    tmp1 = -1 * (int) (25 * arg1);
+                    tmp2 = (int) (25 * (arg1));
+                }
+                Log.d("onPageScrolledtTOO", "onPageScrolled: " + moveTo);
+                if (moveTo == 1) {
+                    dots[arg0].setTranslationX(convertDpToPixel(tmp1, getApplicationContext()));
+                    dots[arg0 + 1].setTranslationX(convertDpToPixel(tmp2, getApplicationContext()));
+                } else {
+                    dots[arg0].setTranslationX(convertDpToPixel(tmp1, getApplicationContext()));
+                    dots[arg0 - 1].setTranslationX(convertDpToPixel(tmp2, getApplicationContext()));
+                }
 
                 Log.d("onPageScrolled arg0", "onPageScrolled: " + arg0
                         + " ; tmp1 = " + tmp1
                         + " ; tmp2 = " + tmp2
+                        + " ; x" + arg0 + " = " + convertPixelsToDp((int) dots[arg0].getTranslationX(), getApplicationContext())
+                        + " ; x" + (arg0 + 1) + " = " + convertPixelsToDp((int) dots[arg0 + 1].getTranslationX(), getApplicationContext())
                 );
+
+//                RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
+//                        RelativeLayout.LayoutParams.WRAP_CONTENT,
+//                        RelativeLayout.LayoutParams.WRAP_CONTENT
+//                );
+//                lp.setMargins(0,0,convertDpToPixel(tmp1, getApplicationContext()),0);
+//                dots[arg0].setLayoutParams(lp);
+//                lp.setMargins(convertDpToPixel(tmp2, getApplicationContext()),0,0,0);
+//
+//                if ((arg0 + 1)< dots.length) {
+//                    dots[arg0 + 1].setLayoutParams(lp);
+//                } else {
+//                    dots[arg0 + 1].setLayoutParams(lp);
+//                }
+
+            } else {
+                if (((int) arg1) == 0 && arg2 == 0) {
+//                    dots[arg0].setWidth(convertDpToPixel(10, getApplicationContext()));
+//                    dots[arg0].setHeight(convertDpToPixel(10, getApplicationContext()));
+//                    dots[arg0].setBackground(getResources().getDrawable(R.drawable.icx_dot_active));
+                    for (int i = 0; i < layouts.length; i++) {
+                        dots[i].setTranslationX(convertDpToPixel(0, getApplicationContext()));
+                        Log.d("onPageScrollState", "onPageSelected: " + i + " -> " + dots[i].getTranslationX());
+                    }
+                }
             }
         }
 
         @Override
         public void onPageScrollStateChanged(int arg0) {
-            Log.d("onPageScroll", "onPageScrollStateChanged: " + arg0);
-            if (arg0 == 1) {
-
-            } else {
-
+            Log.d("onPageScrollState", "onPageScrollStateChanged: " + arg0);
+            if (arg0 == 0){
+                moveTo = 0;
+                Log.d("onPageScrolledtTOO 2", "after selected ---> " + moveTo);
             }
         }
     };
-    private int[] layouts;
     private Button btnNext;
     private Session session;
 
@@ -144,7 +188,7 @@ public class BoardingActivity extends AppCompatActivity {
         /**
          * Checking for first time launch - before calling setContentView()
          */
-        session = new Session(this);
+        // session = new Session(this);
         /*if (!session.isFirstTimeLaunch()) {
             launchHomeScreen();
             finish();
@@ -154,9 +198,9 @@ public class BoardingActivity extends AppCompatActivity {
         /**
          * Making notification bar transparent
          */
-        if (Build.VERSION.SDK_INT >= 21) {
-            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
-        }
+//        if (Build.VERSION.SDK_INT >= 21) {
+//            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+//        }
 
         setContentView(R.layout.activity_boarding);
 
@@ -170,32 +214,11 @@ public class BoardingActivity extends AppCompatActivity {
         layouts = new int[]{
                 R.layout.welcome_slide1,
                 R.layout.welcome_slide2,
+                R.layout.welcome_slide2,
                 R.layout.welcome_slide3
         };
 
-        dots = new TextView[layouts.length];
-
-        dotsLayout.removeAllViews();
-        for (int i = 0; i < dots.length; i++) {
-            dots[i] = new TextView(this);
-            dots[i].setBackground(getResources().getDrawable(R.drawable.icx_dot_inactive));
-            dots[i].setWidth(convertDpToPixel(8, getApplicationContext()));
-            dots[i].setHeight(convertDpToPixel(8, getApplicationContext()));
-
-            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
-                    RelativeLayout.LayoutParams.WRAP_CONTENT,
-                    RelativeLayout.LayoutParams.WRAP_CONTENT
-            );
-
-            int margin = convertDpToPixel(i * 25, getApplicationContext());
-
-            params.setMargins(margin, 0, 0, 0);
-            params.addRule(RelativeLayout.CENTER_VERTICAL);
-            dots[i].setLayoutParams(params);
-            dotsLayout.addView(dots[i]);
-        }
-
-        addBottomDots(0);
+        dotSetup();
         changeStatusBarColor();
 
         myViewPagerAdapter = new MyViewPagerAdapter();
@@ -217,13 +240,38 @@ public class BoardingActivity extends AppCompatActivity {
         });
     }
 
+    public void dotSetup() {
+        dots = new TextView[layouts.length];
+        Log.d("dotSetup", "dotSetup: " + dots.length);
+        dotsLayout.removeAllViews();
+        for (int i = 0; i < dots.length; i++) {
+            dots[i] = new TextView(this);
+            dots[i].setBackground(getResources().getDrawable(R.drawable.icx_dot_inactive));
+            dots[i].setWidth(convertDpToPixel(8, getApplicationContext()));
+            dots[i].setHeight(convertDpToPixel(8, getApplicationContext()));
+
+            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                    RelativeLayout.LayoutParams.WRAP_CONTENT,
+                    RelativeLayout.LayoutParams.WRAP_CONTENT
+            );
+
+            int margin = convertDpToPixel(i * 25, getApplicationContext());
+
+            params.setMargins(margin, 0, 0, 0);
+            params.addRule(RelativeLayout.CENTER_VERTICAL);
+            dots[i].setLayoutParams(params);
+            dotsLayout.addView(dots[i]);
+        }
+        if (dots.length != 0) {
+            dots[0].setWidth(convertDpToPixel(10, getApplicationContext()));
+            dots[0].setHeight(convertDpToPixel(10, getApplicationContext()));
+            dots[0].setBackground(getResources().getDrawable(R.drawable.icx_dot_active));
+        }
+    }
+
     private void addBottomDots(int currentPage) {
         for (int i = 0; i < dots.length; i++) {
-            if (currentPage == i) {
-                dots[currentPage].setWidth(convertDpToPixel(10, getApplicationContext()));
-                dots[currentPage].setHeight(convertDpToPixel(10, getApplicationContext()));
-                dots[currentPage].setBackground(getResources().getDrawable(R.drawable.icx_dot_active));
-            } else {
+            if (currentPage != i) {
                 dots[i].setBackground(getResources().getDrawable(R.drawable.icx_dot_inactive));
             }
         }
@@ -234,7 +282,7 @@ public class BoardingActivity extends AppCompatActivity {
     }
 
     private void launchHomeScreen() {
-        session.setFirstTimeLaunch(false);
+        // session.setFirstTimeLaunch(false);
         startActivity(new Intent(BoardingActivity.this, MainActivity.class));
         finish();
     }
