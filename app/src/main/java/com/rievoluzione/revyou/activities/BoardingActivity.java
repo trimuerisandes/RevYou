@@ -2,12 +2,16 @@ package com.rievoluzione.revyou.activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -22,9 +26,6 @@ import com.rievoluzione.revyou.R;
 
 public class BoardingActivity extends AppCompatActivity {
 
-    public int cur_position = 0;
-    public int prev_position = 0;
-    public int moveTo = 0;
     ViewPager.PageTransformer pageTransformer = new ViewPager.PageTransformer() {
         private static final float MIN_SCALE = 0.85f;
         private static final float MIN_ALPHA = 0.5f;
@@ -33,7 +34,6 @@ public class BoardingActivity extends AppCompatActivity {
         public void transformPage(@NonNull View view, float position) {
             int pageWidth = view.getWidth();
             int pageHeight = view.getHeight();
-            Log.d("transformPage", "transformPage: " + pageWidth + " -> " + position);
 
             if (position < -1) { // [-Infinity,-1)
                 // This page is way off-screen to the left.
@@ -70,32 +70,20 @@ public class BoardingActivity extends AppCompatActivity {
     private MyViewPagerAdapter myViewPagerAdapter;
     private RelativeLayout dotsLayout;
     private TextView[] dots;
-    private int[] layouts;
+
     //  viewpager change listener
     ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {
-
+        public int moveTo = 0;
         @Override
         public void onPageSelected(int position) {
-            dots[position].setWidth(convertDpToPixel(10, getApplicationContext()));
-            dots[position].setHeight(convertDpToPixel(10, getApplicationContext()));
-            dots[position].setBackground(getResources().getDrawable(R.drawable.icx_dot_active));
-            addBottomDots(position);
         }
 
         @Override
         public void onPageScrolled(int arg0, float arg1, int arg2) {
-            Log.d("onPageScrolled", "onPageScrolled: " +
-                    "arg0 = " + arg0 + " ; " +
-                    "arg1 = " + arg1 + " ; " +
-                    "arg2 = " + arg2 + " ; "
-            );
             if (arg1 > 0) {
                 int tmp1 = 0;
                 int tmp2 = 0;
-                Log.d("onPageScrolledtTOO 2", "before -> onPageScrolled: " + moveTo);
                 moveTo = (moveTo == 0) && (arg2 > 1000) ? 2 : 1;
-                Log.d("onPageScrolledtTOO 2", "onPageScrolled: => " + arg2 + " ->" + (arg2 > 1000));
-                Log.d("onPageScrolledtTOO 2", "after -> onPageScrolled: " + moveTo);
 
                 if (moveTo == 1) {
                     tmp1 = (int) (25 * arg1);
@@ -104,45 +92,23 @@ public class BoardingActivity extends AppCompatActivity {
                     tmp1 = -1 * (int) (25 * arg1);
                     tmp2 = (int) (25 * (arg1));
                 }
-                Log.d("onPageScrolledtTOO", "onPageScrolled: " + moveTo);
-                if (moveTo == 1) {
-                    dots[arg0].setTranslationX(convertDpToPixel(tmp1, getApplicationContext()));
-                    dots[arg0 + 1].setTranslationX(convertDpToPixel(tmp2, getApplicationContext()));
-                } else {
-                    dots[arg0].setTranslationX(convertDpToPixel(tmp1, getApplicationContext()));
-                    dots[arg0 - 1].setTranslationX(convertDpToPixel(tmp2, getApplicationContext()));
-                }
 
-                Log.d("onPageScrolled arg0", "onPageScrolled: " + arg0
-                        + " ; tmp1 = " + tmp1
-                        + " ; tmp2 = " + tmp2
-                        + " ; x" + arg0 + " = " + convertPixelsToDp((int) dots[arg0].getTranslationX(), getApplicationContext())
-                        + " ; x" + (arg0 + 1) + " = " + convertPixelsToDp((int) dots[arg0 + 1].getTranslationX(), getApplicationContext())
+                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                        RelativeLayout.LayoutParams.WRAP_CONTENT,
+                        RelativeLayout.LayoutParams.WRAP_CONTENT
                 );
 
-//                RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
-//                        RelativeLayout.LayoutParams.WRAP_CONTENT,
-//                        RelativeLayout.LayoutParams.WRAP_CONTENT
-//                );
-//                lp.setMargins(0,0,convertDpToPixel(tmp1, getApplicationContext()),0);
-//                dots[arg0].setLayoutParams(lp);
-//                lp.setMargins(convertDpToPixel(tmp2, getApplicationContext()),0,0,0);
-//
-//                if ((arg0 + 1)< dots.length) {
-//                    dots[arg0 + 1].setLayoutParams(lp);
-//                } else {
-//                    dots[arg0 + 1].setLayoutParams(lp);
-//                }
+                int margin = convertDpToPixel(arg0 * 25, getApplicationContext());
 
-            } else {
-                if (((int) arg1) == 0 && arg2 == 0) {
-//                    dots[arg0].setWidth(convertDpToPixel(10, getApplicationContext()));
-//                    dots[arg0].setHeight(convertDpToPixel(10, getApplicationContext()));
-//                    dots[arg0].setBackground(getResources().getDrawable(R.drawable.icx_dot_active));
-                    for (int i = 0; i < layouts.length; i++) {
-                        dots[i].setTranslationX(convertDpToPixel(0, getApplicationContext()));
-                        Log.d("onPageScrollState", "onPageSelected: " + i + " -> " + dots[i].getTranslationX());
-                    }
+                params.setMargins(margin, 0, 0, 0);
+                params.addRule(RelativeLayout.CENTER_VERTICAL);
+                dots[0].setLayoutParams(params);
+                if (moveTo == 1) {
+                    dots[0].setTranslationX(convertDpToPixel(tmp1, getApplicationContext()));
+                    dots[arg0 + 1].setTranslationX(convertDpToPixel(tmp2, getApplicationContext()));
+                } else {
+                    dots[arg0 + 1].setTranslationX(convertDpToPixel(tmp1, getApplicationContext()));
+                    dots[0].setTranslationX(convertDpToPixel(tmp2, getApplicationContext()));
                 }
             }
         }
@@ -150,12 +116,13 @@ public class BoardingActivity extends AppCompatActivity {
         @Override
         public void onPageScrollStateChanged(int arg0) {
             Log.d("onPageScrollState", "onPageScrollStateChanged: " + arg0);
-            if (arg0 == 0){
+            if (arg0 == 0) {
                 moveTo = 0;
                 Log.d("onPageScrolledtTOO 2", "after selected ---> " + moveTo);
             }
         }
     };
+    private int[] layouts;
     private Button btnNext;
     private Session session;
 
@@ -185,37 +152,38 @@ public class BoardingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        /**
+        /*
+         * Making notification bar transparent
+         */
+        if (Build.VERSION.SDK_INT >= 21) {
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+        }
+
+        /*
+         * uncomment this if you need first launch only
          * Checking for first time launch - before calling setContentView()
          */
         // session = new Session(this);
-        /*if (!session.isFirstTimeLaunch()) {
-            launchHomeScreen();
-            finish();
-        }*/
+        // if (!session.isFirstTimeLaunch()) {
+        //     launchHomeScreen();
+        //     finish();
+        // }
 
-
-        /**
-         * Making notification bar transparent
-         */
-//        if (Build.VERSION.SDK_INT >= 21) {
-//            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
-//        }
 
         setContentView(R.layout.activity_boarding);
 
         viewPager = findViewById(R.id.view_pager);
         dotsLayout = findViewById(R.id.layoutDots);
         btnNext = findViewById(R.id.btn_next);
-        /**
+
+        /*
          * layouts of all welcome sliders
          * add few more layouts if you want
          */
         layouts = new int[]{
                 R.layout.welcome_slide1,
                 R.layout.welcome_slide2,
-                R.layout.welcome_slide2,
-                R.layout.welcome_slide3
+                R.layout.welcome_slide2
         };
 
         dotSetup();
@@ -282,6 +250,7 @@ public class BoardingActivity extends AppCompatActivity {
     }
 
     private void launchHomeScreen() {
+        /* uncomment this if you need first launch only */
         // session.setFirstTimeLaunch(false);
         startActivity(new Intent(BoardingActivity.this, MainActivity.class));
         finish();
@@ -291,11 +260,11 @@ public class BoardingActivity extends AppCompatActivity {
      * Making notification bar transparent
      */
     private void changeStatusBarColor() {
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-//            Window window = getWindow();
-//            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-//            window.setStatusBarColor(Color.TRANSPARENT);
-//        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.WHITE);
+        }
     }
 
     /**
