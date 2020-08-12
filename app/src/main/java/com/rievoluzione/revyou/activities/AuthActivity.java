@@ -5,6 +5,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -14,12 +15,15 @@ import android.widget.Button;
 
 import com.rievoluzione.revyou.R;
 
+import butterknife.OnClick;
+
 public class AuthActivity extends AppCompatActivity {
 
     Button registration;
     private int[] layouts;
     private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
+
 
 
 
@@ -34,12 +38,12 @@ public class AuthActivity extends AppCompatActivity {
        /* NestedScrollView scrollView = (NestedScrollView) findViewById (R.id.nestedScrollView);
         scrollView.setFillViewport (true);*/
 
-       viewPager.isHorizontalScrollBarEnabled();
+        viewPager.isHorizontalScrollBarEnabled();
 
 
         layouts = new int[]{
-                R.layout.fragment_login,
-                R.layout.fragment_registrazione};
+                R.layout.fragment_registrazione,
+                R.layout.fragment_login};
         myViewPagerAdapter = new MyViewPagerAdapter();
         viewPager.setAdapter(myViewPagerAdapter);
         viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
@@ -59,11 +63,40 @@ public class AuthActivity extends AppCompatActivity {
             if (current < layouts.length) {
                 viewPager.setCurrentItem(current);
 
+            }else {
+                //launchHomeScreen();
+                launchNextScreen();
             }
 
         });
 
+
     }
+    public void launchNextScreen() {
+        startActivity(new Intent(AuthActivity.this, MainActivity.class));
+        finish();
+    }
+
+    /*@Override
+    public void onBackPressed() {
+
+        if (viewPager.getCurrentItem() != 0) {
+            viewPager.setCurrentItem(viewPager.getCurrentItem() - 1,false);
+        }else{
+            finish();
+        }
+
+    }*/
+    @OnClick(R.id.btnBack)
+    public void onBackPressed() {
+        //onBackPressed();
+        if (viewPager.getCurrentItem() != 0) {
+            viewPager.setCurrentItem(viewPager.getCurrentItem() - 1,false);
+        }else{
+            finish();
+        }
+    }
+
 
     private int getItem(int i) {
         return viewPager.getCurrentItem() + i;
@@ -119,6 +152,8 @@ public class AuthActivity extends AppCompatActivity {
 
             return view;
         }
+
+
 
         @Override
         public int getCount() {

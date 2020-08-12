@@ -46,9 +46,10 @@
                         android:layout_height="400dp">-->
                 <com.rievoluzione.revyou.activities.NonSwipeableViewPager
                     android:id="@+id/view_pager"
-                    android:layout_marginTop="@dimen/margin_20dp"
                     android:layout_width="match_parent"
-                    android:layout_height="400dp" />
+                    android:layout_height="500dp"
+                    android:isScrollContainer="true"
+                    android:layout_marginTop="@dimen/margin_20dp"/>
                 <!--    </FrameLayout>
                 </androidx.core.widget.NestedScrollView>-->
 

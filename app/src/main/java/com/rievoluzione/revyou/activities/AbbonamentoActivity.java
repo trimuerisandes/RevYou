@@ -32,4 +32,9 @@ public class AbbonamentoActivity extends AppCompatActivity {
         Intent intent = new Intent(this, UpgradeActivity.class);
         startActivity(intent);
     }
+
+    @OnClick(R.id.btn_gestisci) void gestisci(){
+        Intent intent = new Intent(this, RinnovoActivity.class);
+        startActivity(intent);
+    }
 }
