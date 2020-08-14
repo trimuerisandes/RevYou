@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/margin_20dp"
+    tools:context=".activities.OrarioNotificheActivity">
+
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="28dp"
+        android:layout_marginVertical="20dp"
+        android:src="@drawable/ic_back" />
+
+    <LinearLayout
+        android:id="@+id/TitleBar"
+        android:layout_below="@id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_bold"
+            android:text="Giorno e Ora"
+            android:layout_weight="2"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Reimposta"
+            android:textAlignment="textEnd"
+            android:layout_weight="0.5"
+            android:textColor="@color/sub_text"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_below="@+id/TitleBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_40dp"
+        android:text="GIORNO"
+        android:fontFamily="@font/raleway_semibold"
+        android:textSize="12sp"
+        android:textColor="@color/text"
+        />
+
+    <LinearLayout
+        android:id="@+id/giorno"
+        android:layout_below="@id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="L"
+            android:layout_weight="1"
+            android:textColor="@color/text"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:background="@drawable/bgx_rectangle_blue"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="M"
+            android:textColor="@color/text"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:background="@drawable/bgx_rectangle_blue"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="N"
+            android:textColor="@color/text"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="5dp"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:background="@drawable/bgx_rectangle_blue"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="G"
+            android:textColor="@color/text"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="5dp"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:background="@drawable/bgx_rectangle_blue"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="V"
+            android:textColor="@color/text"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:layout_marginHorizontal="5dp"
+            android:textAlignment="center"
+            android:background="@drawable/bgx_rectangle_blue"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="S"
+            android:textColor="@color/text"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:background="@drawable/bgx_rectangle_blue"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="D"
+            android:textColor="@color/text"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:background="@drawable/bgx_rectangle_blue"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ora"
+        android:layout_below="@+id/giorno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_40dp"
+        android:text="ORA"
+        android:fontFamily="@font/raleway_semibold"
+        android:textSize="12sp"
+        android:textColor="@color/text"
+        />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_below="@+id/ora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_40dp"
+        android:text="INFO"
+        android:fontFamily="@font/raleway_semibold"
+        android:textSize="12sp"
+        android:textColor="@color/text"
+        />
+
+    <TextView
+        android:layout_below="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:text="Di default viene notificata ogni uscita del giorno, a mezzogiorno."
+        android:fontFamily="@font/open_sans_regular"
+        android:textSize="16sp"
+        android:textColor="@color/sub_text"
+        />
+
+    <Button
+        android:id="@+id/buttonVal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/margin_20dp"
+        android:layout_marginVertical="@dimen/margin_20dp"
+        android:background="@color/blue"
+        android:fontFamily="@font/open_sans_regular"
+        android:state_enabled="false"
+        android:text="Salva"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="16dp" />
+
+
+
+
+
+
+
+</RelativeLayout>
