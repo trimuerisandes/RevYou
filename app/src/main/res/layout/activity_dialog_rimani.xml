@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dialogs.DialogAcced">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_20dp"
+        android:background="@drawable/bg_dialog"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-30dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ic_note_dialog" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_close" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_20dp"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Rimani aggiornato con RevYou!"
+            android:textAlignment="center"
+            android:textColor="@color/colorTextdark"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_30dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Anche se non ti sei abbonato, avrai la \n
+            possibilità di accedere all’app ed usufruire \n di una sintesi settimanale gratis per \n
+             sempre."
+            android:textAlignment="center"
+            android:textColor="@color/colorTextDark1"
+            android:textSize="14dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_blue"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="Accedi"
+            android:textAllCaps="false"
+            android:textColor="@color/textBlue" />
+    </LinearLayout>
+
+</RelativeLayout>
