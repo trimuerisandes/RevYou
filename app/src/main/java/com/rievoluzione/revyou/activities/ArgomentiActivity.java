@@ -1,16 +1,21 @@
 package com.rievoluzione.revyou.activities;
 
 import android.os.Bundle;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.rievoluzione.revyou.R;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class ArgomentiActivity  extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
