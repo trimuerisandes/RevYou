@@ -13,6 +13,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -51,12 +52,17 @@ public class IntroduzioneActivity extends AppCompatActivity {
 
     @BindView(R.id.imv_testo)
     ImageView m_imv_testo;
+
+    @BindView(R.id.layoutPlayer)
+    RelativeLayout m_layoutPlayer;
+
+    @BindView(R.id.seek_bar_font_control)
+    SeekBar m_seek_bar_font_control;
+
     boolean isFavoritesClicked = false;
     boolean isTestoClicked = false;
     boolean isCuffieClicked = false;
     boolean isCondividiClicked = false;
-    @BindView(R.id.layoutPlayer)
-    RelativeLayout m_layoutPlayer;
     private MyViewPagerAdapter myViewPagerAdapter;
     private TextView[] dots;
     private int[] layouts;
@@ -74,7 +80,7 @@ public class IntroduzioneActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_layout_iphone_x_xs_11_pro_1);
         ButterKnife.bind(this);
-        /**
+        /*
          * layouts of all sliders
          * add few more layouts if you want
          */
@@ -148,6 +154,22 @@ public class IntroduzioneActivity extends AppCompatActivity {
         viewPager.setAdapter(myViewPagerAdapter);
         viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
 
+        m_seek_bar_font_control.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                myViewPagerAdapter.updateView(progress);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
     }
 
     private void openDialog(int type, String message, Activity activity, View view, int layoutId) {
@@ -292,6 +314,7 @@ public class IntroduzioneActivity extends AppCompatActivity {
      */
     public class MyViewPagerAdapter extends PagerAdapter {
         private LayoutInflater layoutInflater;
+        private View current_view;
 
         public MyViewPagerAdapter() {
         }
@@ -299,7 +322,6 @@ public class IntroduzioneActivity extends AppCompatActivity {
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
             View view = layoutInflater.inflate(layouts[position], container, false);
             if (position == (layouts.length - 1)) {
                 TextView text1 = view.findViewById(R.id.il_parere_text1);
@@ -307,6 +329,7 @@ public class IntroduzioneActivity extends AppCompatActivity {
                 TextView text2 = view.findViewById(R.id.il_parere_text2);
                 text2.setText(Html.fromHtml(getResources().getString(R.string.il_parere)));
             }
+            current_view = view;
             container.addView(view);
 
             return view;
@@ -315,6 +338,12 @@ public class IntroduzioneActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             return layouts.length;
+        }
+
+        public void updateView(float progress) {
+            TextView text = current_view.findViewById(R.id.text1);
+            text.setTextSize(progress);
+
         }
 
         @Override
