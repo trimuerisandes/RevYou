@@ -9,29 +9,40 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.rievoluzione.revyou.activities.AperturaActivity">
+
+        <activity android:name=".activities.PianiTerifeActivity"></activity>
+        <activity android:name=".activities.OrarioNotificheActivity" />
+        <activity android:name=".activities.AperturaActivity" />
+        <activity android:name=".activities.BoardingActivity" />
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.PrimaActivity" />
+        <activity android:name=".dialogs.DialogAcced" />
+        <activity android:name=".activities.Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.BoardingActivity"></activity>
-        <activity android:name="com.rievoluzione.revyou.activities.MainActivity"></activity>
-        <activity android:name="com.rievoluzione.revyou.activities.PrimaActivity"></activity>
-        <activity android:name="com.rievoluzione.revyou.dialogs.DialogAcced"></activity>
-        <activity android:name="com.rievoluzione.revyou.activities.Main"></activity>
+<!--        <activity android:name="com.rievoluzione.revyou.activities.AperturaActivity"/>-->
+<!--        <activity android:name=".activities.BoardingActivity"></activity>-->
+<!--        <activity android:name="com.rievoluzione.revyou.activities.MainActivity"></activity>-->
+<!--        <activity android:name="com.rievoluzione.revyou.activities.PrimaActivity"></activity>-->
+<!--        <activity android:name="com.rievoluzione.revyou.dialogs.DialogAcced"></activity>-->
+<!--        <activity android:name="com.rievoluzione.revyou.activities.Main"></activity>-->
         <activity android:name=".activities.AbbonamentoActivity" />
         <activity android:name=".activities.SuggerimentiActivity" />
         <activity android:name=".activities.ArgomentiActivity" />
         <activity android:name=".activities.UpgradeActivity" />
-        <activity android:name="com.rievoluzione.revyou.activities.ArticoloApertoActivity"></activity>
+        <activity android:name=".activities.ArticoloApertoActivity" />
         <activity android:name=".activities.InfoCredibilitaActivity" />
         <activity android:name=".activities.InfoPraticitaActivity" />
         <activity android:name=".activities.ValutazionedArticoliActivity" />
         <activity android:name=".activities.AuthActivity" />
-        <activity android:name=".activities.IntroduzioneActivity"></activity>
+        <activity android:name=".activities.IntroduzioneActivity" />
         <activity android:name=".activities.RinnovoActivity" />
         <activity android:name=".activities.RevyouersActivity" />
+        <activity android:name=".activities.ValuatizoneArticoliActivity" />
     </application>
 
 </manifest>

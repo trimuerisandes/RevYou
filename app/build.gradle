@@ -51,6 +51,7 @@ dependencies {
     implementation 'com.zhouyou:signseekbar:1.0.6'
 
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.florent37:expansionpanel:1.2.4'
 
 
 
