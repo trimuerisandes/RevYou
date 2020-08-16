@@ -27,4 +27,18 @@
     <color name="color_green">#89cd56</color>
 
 
+    <array name="array_dot_active">
+        <item>@color/cardview_dark_background</item>
+        <item>@color/cardview_dark_background</item>
+        <item>@color/cardview_dark_background</item>
+        <item>@color/cardview_dark_background</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/colorTextDark1</item>
+        <item>@color/colorTextDark1</item>
+        <item>@color/colorTextDark1</item>
+        <item>@color/colorTextDark1</item>
+    </array>
+
 </resources>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.PrimaActivity">
+
+    <LinearLayout
+        android:id="@+id/root1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/margin_40dp"
+            android:fontFamily="@font/raleway_semibold"
+            android:lineHeight="26dp"
+            android:textColor="@color/text"
+            android:text="Perché hai deciso di non abbonarti a \nRevYou ?"
+            android:textSize="16sp" />
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/root1"
+            android:layout_marginTop="@dimen/margin_30dp"
+            android:background="@color/colorTextDark1" />
+
+
+        <RelativeLayout
+            android:animateLayoutChanges="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/butllet1"
+                android:layout_width="8dp"
+                android:layout_height="1dp"
+                android:background="@color/textBlue"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:layout_centerVertical="true"
+                />
+
+            <CheckBox
+                android:id="@+id/cbok1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/butllet1"
+                android:paddingHorizontal="20dp"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/open_sans_regular"
+                android:freezesText="false"
+                android:paddingVertical="@dimen/margin_20dp"
+                android:text="Non ritengo il prezzo vantaggioso"
+                android:textSize="12dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/root1"
+            android:background="@color/colorTextDark1" />
+
+
+        <RelativeLayout
+            android:animateLayoutChanges="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/butllet2"
+                android:layout_width="8dp"
+                android:layout_height="1dp"
+                android:background="@color/textBlue"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:layout_centerVertical="true"
+                />
+
+            <CheckBox
+                android:id="@+id/cbok2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/butllet2"
+                android:paddingHorizontal="20dp"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/open_sans_regular"
+
+                android:freezesText="false"
+                android:paddingVertical="@dimen/margin_20dp"
+                android:text="Ho provato il servizio ma non è di mio interesse"
+                android:textSize="12dp" />
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/root1"
+            android:background="@color/colorTextDark1" />
+
+
+        <RelativeLayout
+            android:animateLayoutChanges="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/butllet3"
+                android:layout_width="8dp"
+                android:layout_height="1dp"
+                android:background="@color/textBlue"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:layout_centerVertical="true"
+                />
+
+            <CheckBox
+                android:id="@+id/cbok3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/butllet3"
+                android:paddingHorizontal="20dp"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/open_sans_regular"
+
+                android:freezesText="false"
+                android:paddingVertical="@dimen/margin_20dp"
+                android:text="Non ho tempo di utilizzarlo"
+                android:textSize="12dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/root1"
+            android:background="@color/colorTextDark1" />
+
+        <RelativeLayout
+            android:animateLayoutChanges="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/butllet"
+                android:layout_width="8dp"
+                android:layout_height="1dp"
+                android:background="@color/textBlue"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:layout_centerVertical="true"
+                />
+            <CheckBox
+                android:id="@+id/cbok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/butllet"
+                android:paddingHorizontal="20dp"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/open_sans_regular"
+                android:freezesText="false"
+                android:paddingVertical="@dimen/margin_20dp"
+                android:text="La qualità dei contenuti non è soddisfacente"
+                android:textSize="12dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/root1"
+            android:background="@color/colorTextDark1" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonVal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/margin_20dp"
+        android:layout_marginVertical="@dimen/margin_20dp"
+        android:background="@color/bgButton"
+        android:fontFamily="@font/open_sans_regular"
+        android:state_enabled="false"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="@color/colorTextDark2"
+        android:textSize="16dp" />
+</RelativeLayout>
