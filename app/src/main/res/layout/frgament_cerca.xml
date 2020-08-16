@@ -13,9 +13,15 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="right"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
+        
+        android:fitsSystemWindows="true">
+
+        <include
+            layout="@layout/navigation_view_filtero"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="27dp"/>
+    </com.google.android.material.navigation.NavigationView>
 
     <include
         layout="@layout/frgament_cerca_main"
