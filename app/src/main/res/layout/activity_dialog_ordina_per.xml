@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dialog">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_20dp"
+        android:paddingVertical="26dp"
+        android:paddingHorizontal="33dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ordina per"
+            android:fontFamily="@font/raleway_bold"
+            android:textSize="20sp"
+            android:layout_marginBottom="34dp"
+            android:textColor="@color/text"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data: "
+                android:fontFamily="@font/open_sans_semibold"
+                android:textSize="16sp"
+                android:textColor="@color/text"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="dal più recente"
+                android:fontFamily="@font/open_sans_regular"
+                android:textSize="16sp"
+                android:textColor="@color/text"/>
+
+        </LinearLayout>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="18dp"
+            android:background="@color/div"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data: "
+                android:fontFamily="@font/open_sans_semibold"
+                android:textSize="16sp"
+                android:textColor="@color/text"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="dal meno recente"
+                android:fontFamily="@font/open_sans_regular"
+                android:textSize="16sp"
+                android:textColor="@color/text"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="18dp"
+            android:background="@color/div"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recensione: "
+                android:fontFamily="@font/open_sans_semibold"
+                android:textSize="16sp"
+                android:textColor="@color/text"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="dalla più alta"
+                android:fontFamily="@font/open_sans_regular"
+                android:textSize="16sp"
+                android:textColor="@color/text"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="18dp"
+            android:background="@color/div"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Credibilità: dalla più alta"
+                android:fontFamily="@font/open_sans_semibold"
+                android:textSize="16sp"
+                android:textColor="#BEBEBE"
+                android:layout_toLeftOf="@id/permium1"
+                android:layout_alignParentLeft="true"/>
+
+
+            <ImageView
+                android:id="@+id/permium1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_permium"
+                android:paddingTop="2dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="18dp"
+            android:background="@color/div"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Praticità: dalla più alta"
+                android:fontFamily="@font/open_sans_semibold"
+                android:textSize="16sp"
+                android:textColor="#BEBEBE"
+                android:layout_toLeftOf="@id/permium"
+                android:layout_alignParentLeft="true"/>
+
+
+            <ImageView
+                android:id="@+id/permium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_permium"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:paddingTop="2dp"
+                />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
