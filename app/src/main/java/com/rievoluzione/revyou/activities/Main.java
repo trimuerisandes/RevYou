@@ -59,7 +59,7 @@ public class Main extends AppCompatActivity {
                 switch (i) {
 
                     case R.id.action_home:
-                        if (fragmentManager.findFragmentByTag("HomeFragment") == null){
+                        if (fragmentManager.findFragmentByTag("HomeFrag ment") == null){
                             fragmentManager.beginTransaction().add(R.id.container,HomeFragment,"HomeFragment").commit();
                         }
                         fragmentManager.beginTransaction().hide(activeFragment).show(HomeFragment).commit();

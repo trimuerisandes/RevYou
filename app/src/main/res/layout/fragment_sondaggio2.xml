@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.PrimaActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <LinearLayout
         android:id="@+id/root1"
         android:layout_width="match_parent"
@@ -17,7 +20,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_20dp"
-            android:layout_marginTop="@dimen/margin_40dp"
             android:fontFamily="@font/raleway_semibold"
             android:lineHeight="26dp"
             android:textColor="@color/text"
@@ -184,6 +186,7 @@
             android:layout_height="150dp"
             android:layout_marginTop="40dp"
             android:hint="Specifica"
+            android:layout_marginBottom="@dimen/margin_150dp"
             android:layout_marginHorizontal="@dimen/margin_20dp"
             android:textColorHint="@color/blue"
             android:fontFamily="@font/open_sans_regular"
@@ -209,3 +212,4 @@
         android:textColor="@color/colorTextDark2"
         android:textSize="16dp" />
 </RelativeLayout>
+</ScrollView>
