@@ -3,6 +3,8 @@
     <string name="Pagamento">Pagamento in unica soluzione \nda 179,88€</string>
     <string name="Abbonamento">Abbonamento annuale</string>
     <string name="Start">Entra in RevYou</string>
+    <string name="Ciao" translatable="false">                        , rispondi al breve\nsondaggio per accedere ai contenuti \nsettimanali gratuiti.</string>
+
     <string name="valutazione_articoli">
         <![CDATA[
 Il Metodo RevYou
