@@ -1,6 +1,7 @@
 package com.rievoluzione.revyou.fragments;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,12 +17,10 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.ui.AppBarConfiguration;
 
 import com.rievoluzione.revyou.R;
-import com.google.android.material.navigation.NavigationView;
+import com.rievoluzione.revyou.activities.Filtero;
 import com.rievoluzione.revyou.activities.InfoCredibilitaActivity;
 import com.rievoluzione.revyou.activities.InfoPraticitaActivity;
 import com.rievoluzione.revyou.adapter.GridPreferitiAdapter;
@@ -32,52 +31,48 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
-public class CercaFragment extends androidx.fragment.app.Fragment  {
+public class CercaFragment extends androidx.fragment.app.Fragment {
 
 
     private AppBarConfiguration mAppBarConfiguration;
 
-    @BindView(R.id.drawer_layout)
-    DrawerLayout drawerLayout;
     @BindView(R.id.btn_filtro)
     ImageView m_filtro;
 
-    @BindView(R.id.nav_view)
-    NavigationView navigationView;
     @BindView(R.id.grid_view)
     MyGridView gridView;
 
     @BindView(R.id.btn_ordina_per)
     TextView btn_ordina;
 
-    public CercaFragment(){
+    public CercaFragment() {
 
     }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.frgament_cerca, container, false);
         ButterKnife.bind(this, view);
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
-                .setDrawerLayout(drawerLayout)
-                .build();
 
         gridView.setAdapter(new GridPreferitiAdapter(getContext(), 10));
         btn_ordina.setOnClickListener(v -> fab_onclick(R.style.DialogScale, "Scale",
                 getActivity(), getActivity().getWindow().getDecorView().getRootView(), R.layout.activity_dialog_ordina_per)
         );
 
-//        NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
-//        NavigationUI.setupActionBarWithNavController(getActivity(), navController, mAppBarConfiguration);
-//        NavigationUI.setupWithNavController(navigationView, navController);
         return view;
 
     }
 
-    @OnClick(R.id.btn_filtro) void btn(){
-        drawerLayout.openDrawer(GravityCompat.END);
+    @OnClick(R.id.btn_filtro)
+    void btn() {
+        //drawerLayout.openDrawer(GravityCompat.END);
+        Intent myIntent = new Intent(getActivity(), Filtero.class);
+        ActivityOptions options =
+                ActivityOptions.makeCustomAnimation(getContext(), R.anim.fade_in, R.anim.fade_out);
+        getContext().startActivity(myIntent, options.toBundle());
+
     }
 
     private void fab_onclick(int type, String message, Activity activity, View view, int layoutId) {
@@ -140,8 +135,6 @@ public class CercaFragment extends androidx.fragment.app.Fragment  {
             RelativeLayout lyt = dialogView.findViewById(R.id.root_layout);
 
             lyt.setOnClickListener(view1 -> alertDialog.dismiss());
-
-
 
 
             alertDialog.getWindow().setBackgroundDrawable(null);

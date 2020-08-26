@@ -43,6 +43,7 @@
         <activity android:name=".activities.RinnovoActivity" />
         <activity android:name=".activities.RevyouersActivity" />
         <activity android:name=".activities.ValuatizoneArticoliActivity" />
+        <activity android:name=".activities.Filtero" android:theme="@style/Theme.Transparent"/>
     </application>
 
 </manifest>
