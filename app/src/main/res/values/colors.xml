@@ -25,6 +25,7 @@
     <color name="color_yellow">#fee509</color>
     <color name="color_green_light">#90e826</color>
     <color name="color_green">#89cd56</color>
+    <color name="bacground_tran">#31373737</color>
 
 
     <array name="array_dot_active">

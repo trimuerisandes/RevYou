@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="25dp"
+        android:orientation="vertical"
+
+        android:layout_marginHorizontal="20dp">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp"
+            android:src="@drawable/ic_back"/>
+
+        <TextView
+            android:id="@+id/btn_cambia_piano"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="Valutazione articoli"
+            android:textStyle="bold"
+            android:fontFamily="@font/raleway_bold"
+            android:textColor="@color/text"/>
+
+        <TextView
+        android:id="@+id/txt_valutazione"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="message"
+        android:textSize="16sp"
+        android:lineHeight="34sp"
+        android:fontFamily="@font/open_sans_regular"
+        android:layout_marginTop="28dp"
+        android:textColor="@color/text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lo studio è valido?"
+            android:textSize="16sp"
+            android:lineHeight="34sp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:drawableLeft="@drawable/bgx_bullet_black"
+            android:drawablePadding="17dp"
+            android:layout_marginTop="28dp"
+            android:textColor="@color/text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="i risultati dello studio sono clinicamente
+rilevanti?"
+            android:textSize="16sp"
+            android:lineHeight="34sp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:drawableLeft="@drawable/bgx_bullet_black"
+            android:drawablePadding="17dp"
+            android:layout_marginTop="28dp"
+            android:textColor="@color/text"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="i risultati dello studio sono applicabili?"
+            android:textSize="16sp"
+            android:lineHeight="34sp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:drawableLeft="@drawable/bgx_bullet_black"
+            android:drawablePadding="17dp"
+            android:layout_marginTop="28dp"
+            android:textColor="@color/text"/>
+
+
+        <TextView
+            android:id="@+id/txt_valutazione_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="message"
+            android:textSize="16sp"
+            android:lineHeight="34sp"
+            android:fontFamily="@font/open_sans_regular"
+            android:layout_marginTop="28dp"
+            android:textColor="@color/text"/>
+
+
+
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
