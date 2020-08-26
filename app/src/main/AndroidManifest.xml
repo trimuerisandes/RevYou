@@ -13,10 +13,7 @@
 
         <activity android:name=".activities.Main" />
         <activity android:name=".activities.SondaggioActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity android:name=".activities.PianiTerifeActivity" />
 
@@ -30,7 +27,10 @@
         <activity android:name=".dialogs.DialogAcced" />
 
         <activity android:name="com.rievoluzione.revyou.activities.AperturaActivity">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".activities.AbbonamentoActivity" />
         <activity android:name=".activities.SuggerimentiActivity" />
