@@ -7,7 +7,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gradient_backgroud"
+        android:background="@drawable/gradient_backgroud_vertical"
         tools:ignore="MissingConstraints">
 
         <LinearLayout

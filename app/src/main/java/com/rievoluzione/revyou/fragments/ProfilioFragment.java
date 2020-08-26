@@ -16,6 +16,7 @@ import com.rievoluzione.revyou.activities.AbbonamentoActivity;
 import com.rievoluzione.revyou.activities.ArgomentiActivity;
 import com.rievoluzione.revyou.activities.RevyouersActivity;
 import com.rievoluzione.revyou.activities.SuggerimentiActivity;
+import com.rievoluzione.revyou.activities.ValuatizoneArticoliActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -54,6 +55,11 @@ public class ProfilioFragment extends androidx.fragment.app.Fragment {
 
     @OnClick(R.id.btn_revyouers) void revyouers(){
         Intent intent = new Intent(getContext(), RevyouersActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_valutazione) void valutazione(){
+        Intent intent = new Intent(getContext(), ValuatizoneArticoliActivity.class);
         startActivity(intent);
     }
 }

@@ -67,6 +67,7 @@
                 android:lines="3"
                 android:hint="Scrivi..."
                 android:textColorHint="@color/blue"
+                android:textColor="@color/blue"
                 android:background="@null"
                 android:lineHeight="19sp"
                 android:textSize="14sp"

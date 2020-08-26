@@ -39,7 +39,7 @@ Insieme abbiamo creato RevYou, uno strumento che i colleghi potranno facilmente 
 "
             android:textSize="16sp"
             android:lineHeight="34sp"
-            android:fontFamily="@font/open_sans_semibold"
+            android:fontFamily="@font/open_sans_regular"
             android:layout_marginTop="28dp"
             android:textColor="@color/text"/>
 

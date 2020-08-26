@@ -1,31 +1,31 @@
 package com.rievoluzione.revyou.activities;
 
 import android.os.Bundle;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.rievoluzione.revyou.R;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class ArgomentiActivity  extends AppCompatActivity {
-
-
+public class Filtero extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_argomenti);
+        setContentView(R.layout.activity_filtero_no_premium);
         ButterKnife.bind(this);
     }
+    @OnClick(R.id.btn_back) void abbonamento(){
+       onBackPressed();
+    }
 
-    @OnClick(R.id.btn_back) void back(){
-        onBackPressed();
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.hold,R.anim.fade_out_right);
+
     }
 }
