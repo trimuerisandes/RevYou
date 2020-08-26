@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:paddingVertical="@dimen/margin_40dp"
         android:paddingHorizontal="@dimen/margin_20dp"
-        android:background="@drawable/background_cerca">
+        android:background="@drawable/background_cercas">
 
         <ImageView
             android:id="@+id/logo"
