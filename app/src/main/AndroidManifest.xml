@@ -44,6 +44,8 @@
         <activity android:name=".activities.IntroduzioneActivity" />
         <activity android:name=".activities.RinnovoActivity" />
         <activity android:name=".activities.RevyouersActivity" />
+        <activity android:name=".activities.Filtero"
+            android:theme="@style/Theme.Transparent"/>
     </application>
 
 </manifest>
