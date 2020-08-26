@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.PrimaActivity">
-
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <LinearLayout
         android:id="@+id/root1"
         android:layout_width="match_parent"
@@ -17,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_20dp"
-            android:layout_marginTop="@dimen/margin_40dp"
+
             android:fontFamily="@font/raleway_semibold"
             android:lineHeight="26dp"
             android:textColor="@color/text"
@@ -59,7 +61,7 @@
                 android:fontFamily="@font/open_sans_regular"
                 android:freezesText="false"
                 android:paddingVertical="@dimen/margin_20dp"
-                android:text="Laureato in fisioterapia"
+                android:text="Non ritengo il prezzo vantaggioso"
                 android:textSize="12dp" />
         </RelativeLayout>
 
@@ -93,10 +95,9 @@
                 android:paddingHorizontal="20dp"
                 android:button="@android:color/transparent"
                 android:fontFamily="@font/open_sans_regular"
-
                 android:freezesText="false"
                 android:paddingVertical="@dimen/margin_20dp"
-                android:text="Studente in fisioterapia"
+                android:text="Ho provato il servizio ma non è di mio interesse"
                 android:textSize="12dp" />
         </RelativeLayout>
 
@@ -134,7 +135,7 @@
 
                 android:freezesText="false"
                 android:paddingVertical="@dimen/margin_20dp"
-                android:text="Professionista in ambito salute"
+                android:text="Non ho tempo di utilizzarlo"
                 android:textSize="12dp" />
         </RelativeLayout>
 
@@ -168,15 +169,85 @@
                 android:fontFamily="@font/open_sans_regular"
                 android:freezesText="false"
                 android:paddingVertical="@dimen/margin_20dp"
-                android:text="Professionista in ambito fitness"
+                android:text="La qualità dei contenuti non è soddisfacente"
                 android:textSize="12dp" />
-        </RelativeLayout>
+
 
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:layout_below="@+id/root1"
+            android:layout_below="@+id/cbok"
             android:background="@color/colorTextDark1" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:animateLayoutChanges="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/butllet5"
+                android:layout_width="8dp"
+                android:layout_height="1dp"
+                android:background="@color/textBlue"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:layout_centerVertical="true"
+                />
+            <CheckBox
+                android:id="@+id/cbok5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/butllet5"
+                android:paddingHorizontal="20dp"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/open_sans_regular"
+                android:freezesText="false"
+                android:paddingVertical="@dimen/margin_20dp"
+                android:text="Ci sono pochi contenuti"
+                android:textSize="12dp" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/cbok5"
+                android:background="@color/colorTextDark1" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:animateLayoutChanges="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="150dp">
+
+            <View
+                android:id="@+id/butllet6"
+                android:layout_width="8dp"
+                android:layout_height="1dp"
+                android:background="@color/textBlue"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:layout_centerVertical="true"
+                />
+            <CheckBox
+                android:id="@+id/cbok6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/butllet6"
+                android:paddingHorizontal="20dp"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/open_sans_regular"
+                android:freezesText="false"
+                android:paddingVertical="@dimen/margin_20dp"
+                android:text="Altro"
+                android:textSize="12dp" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/cbok6"
+                android:background="@color/colorTextDark1" />
+        </RelativeLayout>
     </LinearLayout>
 
     <Button
@@ -194,3 +265,4 @@
         android:textColor="@color/colorTextDark2"
         android:textSize="16dp" />
 </RelativeLayout>
+</ScrollView>
