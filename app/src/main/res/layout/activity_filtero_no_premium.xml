@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_gravity="top"
+        android:padding="22dp"
+
+        android:orientation="vertical"
+        android:layout_marginLeft="71dp"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:id="@+id/tool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="40dp"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/ic_close" />
+
+            <TextView
+                android:id="@+id/btn_cambia_piano"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Filtro"
+                android:textStyle="bold"
+                android:fontFamily="@font/raleway_bold"
+                android:textColor="@color/text"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resetta filtro"
+                android:gravity="right"
+                android:textColor="#bebebe"
+                android:textSize="12sp"
+                android:fontFamily="@font/open_sans_regular"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/tool"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="34dp"
+            >
+
+            <com.github.florent37.expansionpanel.ExpansionHeader
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:expansion_headerIndicator="@id/headerIndicator"
+                app:expansion_layout="@id/expansion_argomento"
+                app:expansion_toggleOnClick="true">
+
+                <!-- HEADER -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Argomento"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/raleway_bold"
+                        android:textColor="@color/text"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="13dp"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:textColor="@color/blue"/>
+
+                </LinearLayout>
+                <!-- HEADER INDICATOR -->
+                <ImageView
+                    android:adjustViewBounds="true"
+                    android:id="@+id/headerIndicator"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="wrap_content"
+                    app:srcCompat="@drawable/ic_baseline_add_24" />
+
+
+            </com.github.florent37.expansionpanel.ExpansionHeader>
+            <com.github.florent37.expansionpanel.ExpansionLayout
+                android:id="@+id/expansion_argomento"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scrollbars="vertical">
+
+                <!-- CONTENT -->
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:paddingLeft="12dp"
+                    android:orientation="vertical">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Testa e ATM"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:textSize="14sp"
+                        android:textColor="@color/text"
+                        android:paddingLeft="14dp"
+                        android:layout_marginTop="24dp"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_17dp"
+                        android:text="Rachide cervicale"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:textSize="14sp"
+                        android:textColor="@color/text"
+                        android:paddingLeft="14dp"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_17dp"
+                        android:text="Spalla"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:textSize="14sp"
+                        android:textColor="@color/text"
+                        android:paddingLeft="14dp"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_17dp"
+                        android:text="Gomito"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:textSize="14sp"
+                        android:textColor="@color/text"
+                        android:paddingLeft="14dp"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_17dp"
+                        android:text="Polso e mano"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:textSize="14sp"
+                        android:textColor="@color/text"
+                        android:paddingLeft="14dp"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_17dp"
+                        android:text="Rachide dorsale e coste"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:textSize="14sp"
+                        android:textColor="@color/text"
+                        android:paddingLeft="14dp"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_17dp"
+                        android:text="Rachide lombare e pelvi"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:textSize="14sp"
+                        android:textColor="@color/text"
+                        android:paddingLeft="14dp"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_17dp"
+                        android:text="Anca"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:textSize="14sp"
+                        android:textColor="@color/text"
+                        android:paddingLeft="14dp"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_17dp"
+                        android:text="Ginocchio"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:textSize="14sp"
+                        android:textColor="@color/text"
+                        android:paddingLeft="14dp"/>
+                </LinearLayout>
+
+
+            </com.github.florent37.expansionpanel.ExpansionLayout>
+
+
+            <com.github.florent37.expansionpanel.ExpansionHeader
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                app:expansion_headerIndicator="@id/header_recensione"
+                app:expansion_layout="@id/expansion_recensione"
+                app:expansion_toggleOnClick="true">
+
+                <!-- HEADER -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recensione"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/raleway_bold"
+                    android:textColor="@color/text"/>
+                <!-- HEADER INDICATOR -->
+                <ImageView
+                    android:adjustViewBounds="true"
+                    android:id="@+id/header_recensione"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="wrap_content"
+                    app:srcCompat="@drawable/ic_baseline_add_24" />
+
+
+            </com.github.florent37.expansionpanel.ExpansionHeader>
+            <com.github.florent37.expansionpanel.ExpansionLayout
+                android:id="@+id/expansion_recensione"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <!-- CONTENT -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/recensione_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_30dp"
+                        android:text="4.5"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:textSize="16sp"
+                        android:textColor="#bebebe"
+                        android:layout_marginBottom="@dimen/margin_17dp"/>
+
+                    <SeekBar
+                        android:id="@+id/simpleSeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="100"
+                        android:fitsSystemWindows="true"
+                        android:padding="0dp"
+                        android:progress="45"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"/>
+
+                </LinearLayout>
+
+            </com.github.florent37.expansionpanel.ExpansionLayout>
+
+            <com.github.florent37.expansionpanel.ExpansionHeader
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                app:expansion_headerIndicator="@id/header_data"
+                app:expansion_layout="@id/expansion_data"
+                app:expansion_toggleOnClick="false">
+
+                <!-- HEADER -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/raleway_bold"
+                    android:textColor="@color/text"/>
+                <!-- HEADER INDICATOR -->
+                <ImageView
+                    android:adjustViewBounds="true"
+                    android:id="@+id/header_data"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="wrap_content"
+                    app:srcCompat="@drawable/ic_baseline_add_24" />
+
+
+            </com.github.florent37.expansionpanel.ExpansionHeader>
+            <com.github.florent37.expansionpanel.ExpansionLayout
+                android:id="@+id/expansion_data"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <!-- CONTENT -->
+
+
+            </com.github.florent37.expansionpanel.ExpansionLayout>
+
+
+
+
+            <com.github.florent37.expansionpanel.ExpansionHeader
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                app:expansion_headerIndicator="@id/header_credibilita"
+                app:expansion_layout="@id/expansion_credibilita"
+                app:expansion_toggleOnClick="false">
+
+                <!-- HEADER -->
+
+                <TextView
+                    android:id="@+id/Credibilita"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Credibilità"
+                    android:drawableRight="@drawable/ic_permium"
+                    android:fontFamily="@font/raleway_bold"
+                    android:textSize="16sp"
+                    android:textColor="#bebebe"/>
+                <!-- HEADER INDICATOR -->
+                <ImageView
+                    android:adjustViewBounds="true"
+                    android:id="@+id/header_credibilita"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="wrap_content"
+                    app:srcCompat="@drawable/ic_baseline_add_24"
+                    android:visibility="gone"/>
+
+
+            </com.github.florent37.expansionpanel.ExpansionHeader>
+            <com.github.florent37.expansionpanel.ExpansionLayout
+                android:id="@+id/expansion_credibilita"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <!-- CONTENT -->
+
+
+
+            </com.github.florent37.expansionpanel.ExpansionLayout>
+
+            <com.github.florent37.expansionpanel.ExpansionHeader
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                app:expansion_headerIndicator="@id/header_praticita"
+                app:expansion_layout="@id/expansion_praticita"
+                app:expansion_toggleOnClick="false">
+
+                <!-- HEADER -->
+
+                <TextView
+                    android:id="@+id/praticita"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Praticità"
+                    android:drawableRight="@drawable/ic_permium"
+                    android:fontFamily="@font/raleway_bold"
+                    android:textSize="16sp"
+                    android:textColor="#bebebe"/>
+                <!-- HEADER INDICATOR -->
+                <ImageView
+                    android:adjustViewBounds="true"
+                    android:id="@+id/header_praticita"
+                    android:layout_gravity="right"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="wrap_content"
+                    app:srcCompat="@drawable/ic_baseline_add_24"
+                    android:visibility="gone"/>
+
+
+            </com.github.florent37.expansionpanel.ExpansionHeader>
+            <com.github.florent37.expansionpanel.ExpansionLayout
+                android:id="@+id/expansion_praticita"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <!-- CONTENT -->
+
+
+
+            </com.github.florent37.expansionpanel.ExpansionLayout>
+
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Preferiti"
+                android:textSize="16sp"
+                android:fontFamily="@font/raleway_bold"
+                android:textColor="@color/text"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Applica filtro"
+            android:textSize="16sp"
+            android:textColor="@color/colorWhite"
+            android:textAllCaps="false"
+            android:background="@drawable/bgx_btn_rounded_blue"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+</LinearLayout>
