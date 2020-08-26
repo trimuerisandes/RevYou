@@ -12,18 +12,18 @@
 
         <activity android:name=".activities.PianiTerifeActivity"></activity>
         <activity android:name=".activities.OrarioNotificheActivity" />
-        <activity android:name=".activities.AperturaActivity" />
-        <activity android:name=".activities.BoardingActivity" />
-        <activity android:name=".activities.MainActivity" />
-        <activity android:name=".activities.PrimaActivity" />
-        <activity android:name=".dialogs.DialogAcced" />
-        <activity android:name=".activities.Main">
+        <activity android:name=".activities.AperturaActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.BoardingActivity" />
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.PrimaActivity" />
+        <activity android:name=".dialogs.DialogAcced" />
+        <activity android:name=".activities.Main"/>
 <!--        <activity android:name="com.rievoluzione.revyou.activities.AperturaActivity"/>-->
 <!--        <activity android:name=".activities.BoardingActivity"></activity>-->
 <!--        <activity android:name="com.rievoluzione.revyou.activities.MainActivity"></activity>-->
