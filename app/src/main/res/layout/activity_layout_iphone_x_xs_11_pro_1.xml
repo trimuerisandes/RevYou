@@ -89,12 +89,13 @@
                 android:textSize="14sp" />
 
             <SeekBar
+                android:id="@+id/seek_bar_font_control"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toStartOf="@id/labelZoomIn"
                 android:layout_toEndOf="@id/labelZoomOut"
-                android:progress="50"
+                android:progress="0"
                 android:progressTint="#585858"
                 android:thumbTint="#585858" />
 

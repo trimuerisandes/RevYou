@@ -50,7 +50,7 @@
             android:layout_height="match_parent"
             android:layout_below="@id/paret_logo"
 
-            android:layout_marginTop="109dp"
+            android:layout_marginTop="-10dp"
             android:orientation="vertical">
 
 

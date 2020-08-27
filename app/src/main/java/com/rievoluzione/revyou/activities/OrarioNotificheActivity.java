@@ -1,23 +1,20 @@
 package com.rievoluzione.revyou.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.CheckedTextView;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
+import android.widget.TimePicker;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.rievoluzione.revyou.R;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class OrarioNotificheActivity extends AppCompatActivity {
 
@@ -25,11 +22,16 @@ public class OrarioNotificheActivity extends AppCompatActivity {
     CheckBox textM, textN, textG, textV, textS, textD;
     CheckedTextView textL;
     Context context;
+
+    @BindView(R.id.timepicker)
+    TimePicker m_timepicker;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_orario_notifiche);
+        ButterKnife.bind(this);
         context = this;
         packageStarting = findViewById(R.id.packageStarting);
         //textL = findViewById(R.id.text_L);
@@ -46,13 +48,13 @@ public class OrarioNotificheActivity extends AppCompatActivity {
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
+                if (isChecked) {
                     //buttonView.setBackground(getResources().getDrawable(R.drawable.bg_blue));
                     buttonView.setBackgroundColor(getResources().getColor(R.color.blue));
                     buttonView.setTextColor(getResources().getColor(R.color.colorWhite));
 
                 }
-                if (!isChecked){
+                if (!isChecked) {
                     buttonView.setTextColor(getResources().getColor(R.color.text1));
                     buttonView.setBackground(getResources().getDrawable(R.drawable.bg_gradient));
                 }
@@ -61,13 +63,13 @@ public class OrarioNotificheActivity extends AppCompatActivity {
         textM.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
+                if (isChecked) {
                     //buttonView.setBackground(getResources().getDrawable(R.drawable.bg_blue));
                     buttonView.setBackgroundColor(getResources().getColor(R.color.blue));
                     buttonView.setTextColor(getResources().getColor(R.color.colorWhite));
 
                 }
-                if (!isChecked){
+                if (!isChecked) {
                     buttonView.setTextColor(getResources().getColor(R.color.text1));
                     buttonView.setBackground(getResources().getDrawable(R.drawable.bg_gradient));
                 }
@@ -76,13 +78,13 @@ public class OrarioNotificheActivity extends AppCompatActivity {
         textN.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
+                if (isChecked) {
                     //buttonView.setBackground(getResources().getDrawable(R.drawable.bg_blue));
                     buttonView.setBackgroundColor(getResources().getColor(R.color.blue));
                     buttonView.setTextColor(getResources().getColor(R.color.colorWhite));
 
                 }
-                if (!isChecked){
+                if (!isChecked) {
                     buttonView.setTextColor(getResources().getColor(R.color.text1));
                     buttonView.setBackground(getResources().getDrawable(R.drawable.bg_gradient));
                 }
@@ -91,13 +93,13 @@ public class OrarioNotificheActivity extends AppCompatActivity {
         textG.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
+                if (isChecked) {
                     //buttonView.setBackground(getResources().getDrawable(R.drawable.bg_blue));
                     buttonView.setBackgroundColor(getResources().getColor(R.color.blue));
                     buttonView.setTextColor(getResources().getColor(R.color.colorWhite));
 
                 }
-                if (!isChecked){
+                if (!isChecked) {
                     buttonView.setTextColor(getResources().getColor(R.color.text1));
                     buttonView.setBackground(getResources().getDrawable(R.drawable.bg_gradient));
                 }
@@ -106,13 +108,13 @@ public class OrarioNotificheActivity extends AppCompatActivity {
         textV.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
+                if (isChecked) {
                     //buttonView.setBackground(getResources().getDrawable(R.drawable.bg_blue));
                     buttonView.setBackgroundColor(getResources().getColor(R.color.blue));
                     buttonView.setTextColor(getResources().getColor(R.color.colorWhite));
 
                 }
-                if (!isChecked){
+                if (!isChecked) {
                     buttonView.setTextColor(getResources().getColor(R.color.text1));
                     buttonView.setBackground(getResources().getDrawable(R.drawable.bg_gradient));
                 }
@@ -121,13 +123,13 @@ public class OrarioNotificheActivity extends AppCompatActivity {
         textS.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
+                if (isChecked) {
                     //buttonView.setBackground(getResources().getDrawable(R.drawable.bg_blue));
                     buttonView.setBackgroundColor(getResources().getColor(R.color.blue));
                     buttonView.setTextColor(getResources().getColor(R.color.colorWhite));
 
                 }
-                if (!isChecked){
+                if (!isChecked) {
                     buttonView.setTextColor(getResources().getColor(R.color.text1));
                     buttonView.setBackground(getResources().getDrawable(R.drawable.bg_gradient));
                 }
@@ -136,21 +138,25 @@ public class OrarioNotificheActivity extends AppCompatActivity {
         textD.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
+                if (isChecked) {
                     //buttonView.setBackground(getResources().getDrawable(R.drawable.bg_blue));
                     buttonView.setBackgroundColor(getResources().getColor(R.color.blue));
                     buttonView.setTextColor(getResources().getColor(R.color.colorWhite));
 
                 }
-                if (!isChecked){
+                if (!isChecked) {
                     buttonView.setTextColor(getResources().getColor(R.color.text1));
                     buttonView.setBackground(getResources().getDrawable(R.drawable.bg_gradient));
                 }
             }
         });
-
+        m_timepicker.setIs24HourView(false);
 
     }
 
+    @OnClick(R.id.btn_back)
+    void btnBack() {
+        onBackPressed();
+    }
 
 }
