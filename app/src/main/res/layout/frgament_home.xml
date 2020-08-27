@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
-            android:background="@drawable/pic_subtraction" />
+            android:background="@drawable/pic_substractions" />
 
         <LinearLayout
             android:id="@+id/paret_logo"
@@ -50,6 +50,7 @@
             android:layout_height="match_parent"
             android:layout_below="@id/paret_logo"
 
+            android:layout_marginTop="109dp"
             android:orientation="vertical">
 
 
