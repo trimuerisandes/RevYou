@@ -17,7 +17,12 @@
         </activity>
         <activity android:name=".activities.PianiTerifeActivity" />
 
-        <activity android:name=".activities.OrarioNotificheActivity" />
+        <activity android:name=".activities.OrarioNotificheActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".activities.BoardingActivity" />
         <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.AnnulamenoActivity" >
@@ -27,10 +32,7 @@
         <activity android:name=".dialogs.DialogAcced" />
 
         <activity android:name="com.rievoluzione.revyou.activities.AperturaActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity android:name=".activities.AbbonamentoActivity" />
         <activity android:name=".activities.SuggerimentiActivity" />
