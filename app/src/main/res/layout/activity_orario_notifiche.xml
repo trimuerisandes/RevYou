@@ -58,6 +58,7 @@
     <LinearLayout
         android:id="@+id/giorno"
         android:layout_below="@id/text1"
+        android:layout_marginTop="@dimen/margin_30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <CheckBox
@@ -66,6 +67,7 @@
             android:layout_height="50dp"
             android:text="L"
             android:layout_weight="1"
+            android:layout_marginRight="5dp"
             android:textColor="@color/text1"
             android:textSize="30dp"
             android:button="@android:color/transparent"
