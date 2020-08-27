@@ -14,6 +14,7 @@ import androidx.annotation.Nullable;
 import com.rievoluzione.revyou.R;
 import com.rievoluzione.revyou.activities.AbbonamentoActivity;
 import com.rievoluzione.revyou.activities.ArgomentiActivity;
+import com.rievoluzione.revyou.activities.OrarioNotificheActivity;
 import com.rievoluzione.revyou.activities.RevyouersActivity;
 import com.rievoluzione.revyou.activities.SuggerimentiActivity;
 import com.rievoluzione.revyou.activities.ValuatizoneArticoliActivity;
@@ -60,6 +61,10 @@ public class ProfilioFragment extends androidx.fragment.app.Fragment {
 
     @OnClick(R.id.btn_valutazione) void valutazione(){
         Intent intent = new Intent(getContext(), ValuatizoneArticoliActivity.class);
+        startActivity(intent);
+    }
+    @OnClick(R.id.giorno) void giorno(){
+        Intent intent = new Intent(getContext(), OrarioNotificheActivity.class);
         startActivity(intent);
     }
 }
