@@ -9,31 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
-        <activity android:name=".activities.Main" />
-        <activity android:name=".activities.SondaggioActivity">
-
-        </activity>
-        <activity android:name=".activities.PianiTerifeActivity" />
-
-        <activity android:name=".activities.OrarioNotificheActivity" >
+        <activity android:name=".activities.AperturaActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.Main" />
+        <activity android:name=".activities.SondaggioActivity"></activity>
+        <activity android:name=".activities.PianiTerifeActivity" />
+        <activity android:name=".activities.OrarioNotificheActivity"></activity>
         <activity android:name=".activities.BoardingActivity" />
         <activity android:name=".activities.MainActivity" />
-        <activity android:name=".activities.AnnulamenoActivity" >
-
-        </activity>
+        <activity android:name=".activities.AnnulamenoActivity"></activity>
         <activity android:name=".activities.PrimaActivity"></activity>
         <activity android:name=".dialogs.DialogAcced" />
-
-        <activity android:name="com.rievoluzione.revyou.activities.AperturaActivity">
-
-        </activity>
         <activity android:name=".activities.AbbonamentoActivity" />
         <activity android:name=".activities.SuggerimentiActivity" />
         <activity android:name=".activities.ArgomentiActivity" />
@@ -46,8 +36,9 @@
         <activity android:name=".activities.IntroduzioneActivity" />
         <activity android:name=".activities.RinnovoActivity" />
         <activity android:name=".activities.RevyouersActivity" />
-        <activity android:name=".activities.Filtero"
-            android:theme="@style/Theme.Transparent"/>
+        <activity
+            android:name=".activities.Filtero"
+            android:theme="@style/Theme.Transparent" />
     </application>
 
 </manifest>

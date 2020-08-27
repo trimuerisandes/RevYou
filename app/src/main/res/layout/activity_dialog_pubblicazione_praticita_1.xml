@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dialog"
+    android:paddingVertical="25dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="33dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:fontFamily="@font/raleway_bold"
+                        android:text="Pubblicazione"
+                        android:textColor="#373737"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/btnClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_close" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="31dp"
+                    android:fontFamily="@font/raleway_semibold"
+                    android:lineSpacingExtra="22sp"
+                    android:text="Titolo originale"
+                    android:textAllCaps="true"
+                    android:textColor="#4b4b4b"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:lineSpacingExtra="10sp"
+                    android:text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"
+                    android:textColor="#bebebe"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="34dp"
+                    android:fontFamily="@font/raleway_semibold"
+                    android:lineSpacingExtra="22sp"
+                    android:text="Autori"
+                    android:textAllCaps="true"
+                    android:textColor="#4b4b4b"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:lineSpacingExtra="10sp"
+                    android:text="Jp Morgans, WJ Ribbans, HA Ribbans, JA Cruickshank, EV Wood "
+                    android:textColor="#bebebe"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="34dp"
+                    android:fontFamily="@font/raleway_semibold"
+                    android:lineSpacingExtra="22sp"
+                    android:text="rivista"
+                    android:textAllCaps="true"
+                    android:textColor="#4b4b4b"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:lineSpacingExtra="10sp"
+                    android:text="Foot ankle surgery"
+                    android:textColor="#bebebe"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="34dp"
+                    android:fontFamily="@font/raleway_semibold"
+                    android:lineSpacingExtra="22sp"
+                    android:text="data di pubblicazione"
+                    android:textAllCaps="true"
+                    android:textColor="#4b4b4b"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:lineSpacingExtra="10sp"
+                    android:text="Gennaio 2015"
+                    android:textColor="#bebebe"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_credibilita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginBottom="21.5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/raleway_semibold"
+                        android:lineSpacingExtra="22sp"
+                        android:text="credibilità"
+                        android:textAllCaps="true"
+                        android:textColor="#4b4b4b"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/pic_mask_group_42"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/raleway_semibold"
+                        android:lineSpacingExtra="22sp"
+                        android:text="Premium"
+                        android:textAllCaps="true"
+                        android:textColor="#168be6"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="15dp"
+                        android:background="@drawable/bg_seekbar_credibilita" />
+
+                    <SeekBar
+                        android:id="@+id/seekbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/credibilita_seekbar"
+                        android:progress="80"
+                        android:progressDrawable="@android:color/transparent"
+                        android:thumb="@drawable/icx_progress_thumb" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_praticita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/raleway_semibold"
+                        android:lineSpacingExtra="22sp"
+                        android:text="praticità"
+                        android:textAllCaps="true"
+                        android:textColor="#4b4b4b"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/pic_mask_group_42"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/raleway_semibold"
+                        android:lineSpacingExtra="22sp"
+                        android:text="Premium"
+                        android:textAllCaps="true"
+                        android:textColor="#168be6"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <com.zhouyou.view.seekbar.SignSeekBar
+                    android:id="@+id/seek_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:layout_marginHorizontal="20dp"
+                    app:ssb_auto_adjust_section_mark="true"
+                    app:ssb_is_float_type="true"
+                    app:ssb_max="5"
+                    app:ssb_progress="4.5"
+                    app:ssb_second_track_color="@color/blue"
+                    app:ssb_section_count="5"
+                    app:ssb_show_progress_in_float="true"
+                    app:ssb_show_section_mark="true"
+                    app:ssb_show_sign="true"
+                    app:ssb_show_thumb_shadow="true"
+                    app:ssb_show_thumb_text="false"
+
+                    app:ssb_sign_color="@android:color/transparent"
+                    app:ssb_sign_height="15dp"
+                    app:ssb_sign_show_border="false"
+                    app:ssb_sign_text_color="@color/blue"
+                    app:ssb_thumb_ratio="0.5"
+                    app:ssb_track_color="#dbdbdb" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
